@@ -24,17 +24,18 @@ gem 'mini_magick',             '3.8.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-	gem 'sqlite3'
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-end
+gem 'web-console', '~> 2.0', group: :development
 
 group :test do
 	gem 'minitest-reporters', '1.0.5'
   gem 'mini_backtrace',     '0.1.3'
   gem 'guard-minitest',     '2.3.1'
+end
+
+group :development, :test do
+	gem 'sqlite3'
+  gem 'byebug'
+  gem 'spring'
 end
 
 group :production do
