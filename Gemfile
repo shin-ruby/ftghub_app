@@ -11,6 +11,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 
+gem 'font-awesome-rails'
+gem 'simple_form'
+gem 'will_paginate', '~> 3.0.7'
 gem 'faker', '~> 1.6.1'
 gem 'bootstrap-will_paginate'
 gem 'carrierwave',             '~> 0.10.0'
@@ -28,8 +31,9 @@ gem 'bcrypt', '~> 3.1.10'
 gem 'web-console', '~> 3.1.1', group: :development
 
 group :test do
+	gem 'minitest-reporters', '1.0.5'
   gem 'mini_backtrace',     '~> 0.1.3'
-  gem 'guard-minitest',     '~> 2.4.4'
+  gem 'guard-minitest',     '2.3.1'
 end
 
 group :development, :test do
