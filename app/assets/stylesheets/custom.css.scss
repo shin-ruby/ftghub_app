@@ -6,6 +6,7 @@ $gray-medium-light: #eaeaea;
 $gray-light: #777777;
 $gray: #666666;
 $gray-darker: #222222;
+$gray-lighter: #EEEEEE;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -137,6 +138,17 @@ aside {
   margin-right: 10px;
 }
 
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
 
 
 
