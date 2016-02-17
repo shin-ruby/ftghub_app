@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class UsersProfileTest < ActionDispatch::IntegrationTest
-	include ApplicationHelper
+	include ApplicationHelper #注意 full_title
   
   def setup
     @user = users(:michael)

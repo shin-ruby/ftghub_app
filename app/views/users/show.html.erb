@@ -8,9 +8,13 @@
         <%= @user.name %>
       </h1>
     </section>
+    <section class="stats">
+      <%= render 'shared/stats' %>
+    </section>
   </aside>
 
   <div class="col-md-8">
+    <%= render 'follow_form' if user_signed_in? %>
     <% if @user.fightposts.any? %>
       <h3>Fightposts (<%= @user.fightposts.count %>)</h3>
       <ol class="fightposts">
