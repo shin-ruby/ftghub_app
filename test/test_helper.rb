@@ -9,5 +9,9 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+end
+
+# devise Test 需要引入一下代码
+class ActionController::TestCase
   include Devise::TestHelpers
 end

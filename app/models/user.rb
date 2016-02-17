@@ -5,4 +5,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates_presence_of :name , :on => :create, :message => "can't be blank"
+  has_many :fightposts, dependent: :destroy
+
+
+  def feed
+    Fightpost.where("user_id = ?", id)
+  end
+  
 end

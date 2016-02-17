@@ -1,0 +1,14 @@
+<%= simple_form_for(@fightpost, html: { multipart: true }) do |f| %>
+	<%= f.input :picture, accept: 'image/jpeg, image/gif, image/png' %>
+  <%= f.input :content, as: :text, required: true, placeholder: "Write something..." %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
+
+<script type="text/javascript">
+  $('#fightpost_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 3) {
+      alert('Maximum file size is 3MB. Please choose a smaller file.');
+    }
+  });
+</script>

@@ -8,6 +8,8 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+    #debugger
+    @fightposts = @user.fightposts.paginate(page: params[:page])
   end
 
   def destroy
@@ -15,6 +17,7 @@ class UsersController < ApplicationController
     flash[:success] = "User deleted"
     redirect_to users_url
   end
+
 
   private
 
