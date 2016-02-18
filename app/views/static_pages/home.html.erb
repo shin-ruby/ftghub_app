@@ -2,7 +2,7 @@
 
 <% if user_signed_in? %>
   <h3>Share your show!</h3>
-
+	<%= link_to (fa_icon "camera-retro", text: "Show here..."), new_fightpost_path, class: "btn btn-sm btn-info" %>
   <h3>Fightpost Feed</h3>
   <%= render 'shared/feed' %>
 

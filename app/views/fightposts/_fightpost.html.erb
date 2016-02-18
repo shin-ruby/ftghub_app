@@ -1,15 +1,30 @@
-<li id="fightpost-<%= fightpost.id %>">
-	<%= link_to image_tag("user.jpg", size: "50", class: "gravatar"), fightpost.user %>
-  <span class="user"><%= link_to fightpost.user.name, fightpost.user %></span>
-  <span class="content">
-    <%= fightpost.content %>
-    <%= image_tag fightpost.picture.url if fightpost.picture? %>
-  </span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(fightpost.created_at) %> ago.
-    <% if current_user?(fightpost.user) %>
-      <%= link_to "delete", fightpost, method: :delete,
-                                       data: { confirm: "You sure?" } %>
-    <% end %>
-  </span>
-</li>
+
+
+<ul class="media-list">
+  <li class="media">
+    <div class="media-left">
+      <%= link_to image_tag("user.jpg", size: "50", class: "media-object"), fightpost.user %>
+    </div>
+    <div class="media-body">
+      <h5 class="media-heading"><%= link_to fightpost.user.name, fightpost.user %></h5>
+      <span class="content">
+        <%= image_tag fightpost.picture.url if fightpost.picture? %>
+        <%= fightpost.content %></p>
+      </span>
+      <span class="timestamp">
+        Posted <%= time_ago_in_words(fightpost.created_at) %> ago.
+        <% if current_user?(fightpost.user) %>
+          <%= link_to "delete", fightpost, method: :delete,
+                                           data: { confirm: "You sure?" } %>
+        <% end %>
+      </span>
+    </div>
+    <span class="social-action">
+      <ul class="list-inline">
+        <li><i class="fa fa-heart"></i>289</li>
+        <li><i class="fa fa-comment"></i>23</li>
+        <li><i class="fa fa-share-square-o"></i></li>
+      </ul>
+    </span>
+  </li>
+</ul>
