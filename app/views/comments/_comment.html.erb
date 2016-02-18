@@ -1,0 +1,11 @@
+<% @fightpost.comments.each do |comment| %> 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.content %>
+    <% if current_user.admin? && comment.user_id %>
+    	| <%= link_to 'Destroy Comment', [comment.fightpost, comment],
+	               method: :delete,
+	               data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </p>
+<% end %>

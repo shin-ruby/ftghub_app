@@ -9,7 +9,9 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
-  resources :fightposts
+  resources :fightposts do
+    resources :comments
+  end
   resources :relationships, only: [:create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.

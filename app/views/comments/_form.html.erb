@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+	<%= simple_form_for([@fightpost, @fightpost.comments.build]) do |f| %>
+	  <%= f.input :content %>
+	  <%= f.input :user_id, as: :hidden, :input_html => { :value => current_user.id } %>
+	  <%= f.button :submit %>
+	<% end %>
+<% else %>
+	<p>登录后评论</p>
+<% end %>

@@ -2,6 +2,9 @@ class FightpostsController < ApplicationController
 	before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
 	before_action :correct_user,   only: :destroy
 
+  def show
+    @fightpost = Fightpost.find(params[:id])
+  end
 
   def new
     @fightpost = current_user.fightposts.build

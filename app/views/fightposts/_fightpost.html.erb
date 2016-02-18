@@ -1,5 +1,3 @@
-
-
 <ul class="media-list">
   <li class="media">
     <div class="media-left">
@@ -9,7 +7,7 @@
       <h5 class="media-heading"><%= link_to fightpost.user.name, fightpost.user %></h5>
       <span class="content">
         <%= image_tag fightpost.picture.url if fightpost.picture? %>
-        <%= fightpost.content %></p>
+        <%= link_to fightpost.content, fightpost %></p>
       </span>
       <span class="timestamp">
         Posted <%= time_ago_in_words(fightpost.created_at) %> ago.
@@ -22,7 +20,7 @@
     <span class="social-action">
       <ul class="list-inline">
         <li><i class="fa fa-heart"></i>289</li>
-        <li><i class="fa fa-comment"></i>23</li>
+        <li><%= link_to (fa_icon "comment", text: "23"), fightpost %></li>
         <li><i class="fa fa-share-square-o"></i></li>
       </ul>
     </span>
