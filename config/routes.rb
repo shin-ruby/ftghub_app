@@ -1,18 +1,26 @@
 Rails.application.routes.draw do
 
-  devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' }
-
   root 'static_pages#home'
   get 'about' => 'static_pages#about'
+
+  devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' }
   resources :users do
     member do
       get :following, :followers
     end
+    #resources :profiles
   end
   resources :fightposts do
     resources :comments
   end
   resources :relationships, only: [:create, :destroy]
+
+  resources :profiles
+  # get ':id' => 'users#show', as: :user_profile
+  # get ':id/setting' => 'users#edit', as: :user_setting
+  # match ':id/setting' => 'users#update', via: [:put, :patch]
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

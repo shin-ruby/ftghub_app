@@ -11,6 +11,13 @@
     <section class="stats">
       <%= render 'shared/stats' %>
     </section>
+    <section class="stats">
+      <% if @profile.nil? %>
+        <%= link_to "Not Profile" %>
+      <% else %>
+        <%= link_to "Show Profile", profile_path(@profile) %>
+      <% end %>
+    </section>
   </aside>
 
   <div class="col-md-8">

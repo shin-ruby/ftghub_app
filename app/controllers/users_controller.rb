@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
     #debugger
     @fightposts = @user.fightposts.paginate(page: params[:page])
+
+    @profile = Profile.find_by(user_id: @user)
   end
 
   def destroy

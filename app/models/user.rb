@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
   has_many :followers, through: :passive_relationships, source: :follower
 
   has_many :comments, dependent: :destroy
+  has_one :profile, dependent: :destroy
 
 
 
