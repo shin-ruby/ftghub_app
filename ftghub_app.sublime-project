@@ -4,7 +4,7 @@
 		{
 			"path": ".",
 			"folder_exclude_patterns": [".bundle",".idea","tmp",".capistrano","log","tmp","public/assets"],
-			"file_exclude_patterns": ["*.sublime-workspace","html5shiv.js","respond.min.js",".byebug_history"]
+			"file_exclude_patterns": ["*.sqlite3","*.sqlite3-journal","*.sublime-workspace","html5shiv.js","respond.min.js",".byebug_history"]
 		}
 	],
     "settings":

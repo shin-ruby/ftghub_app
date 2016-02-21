@@ -7,10 +7,10 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  # 覆盖divise登录后的转向 
-  def after_sign_in_path_for(resource_or_scope)  
-    user_path(resource_or_scope) 
-  end    
+  # 覆盖divise登录后的转向
+  def after_sign_in_path_for(resource_or_scope)
+    user_path(resource_or_scope)
+  end
 
   protected
 
@@ -18,14 +18,13 @@ class ApplicationController < ActionController::Base
     registration_params = [:name, :email, :password, :password_confirmation]
 
     if params[:action] == 'update'
-      devise_parameter_sanitizer.for(:account_update) { 
-        |u| u.permit(registration_params << :current_password)
-      }
+      devise_parameter_sanitizer.for(:account_update) do |u|
+        u.permit(registration_params << :current_password)
+      end
     elsif params[:action] == 'create'
-      devise_parameter_sanitizer.for(:sign_up) { 
-        |u| u.permit(registration_params) 
-      }
+      devise_parameter_sanitizer.for(:sign_up) do |u|
+        u.permit(registration_params)
+      end
     end
   end
-
 end

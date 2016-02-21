@@ -23,6 +23,13 @@ module FtghubApp
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
+    # Disable most of the extra content which is no neeed
+    config.generators do |g|
+        g.stylesheets    false
+        g.assets         false
+        g.helper         false
+    end
+
     # 在处理 Ajax 的表单中添加真伪令牌
     config.action_view.embed_authenticity_token_in_remote_forms = true
   end
