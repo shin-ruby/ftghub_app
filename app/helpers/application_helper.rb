@@ -29,4 +29,21 @@ module ApplicationHelper
   	Profile.find_by(user_id: current_user).id
   end
 
+  def comment_count(fightpost)
+    if Comment.find_by(fightpost_id: fightpost).nil?
+      "0"
+    else
+      Comment.where(fightpost_id: fightpost).count
+    end
+  end
+
+  def liker_fightpost
+    if !params[:id].nil?
+      params[:id]
+    else
+      @fightpost
+    end
+  end
+
+
 end

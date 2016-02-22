@@ -14,8 +14,9 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :relationships, only: [:create, :destroy]
-
   resources :profiles
+  resources :likers, only: [:create, :destroy]
+
   # get ':id' => 'users#show', as: :user_profile
   # get ':id/setting' => 'users#edit', as: :user_setting
   # match ':id/setting' => 'users#update', via: [:put, :patch]
