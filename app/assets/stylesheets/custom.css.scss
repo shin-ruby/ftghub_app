@@ -226,6 +226,19 @@ aside {
   }
 }
 
+#like_form {
+  button {
+      border: 0px
+  }
+  button:focus,
+  button:active,
+  button:visited {
+     border: none; outline:none;
+  }
+
+}
+
+
 aside {
   textarea {
     height: 100px;
