@@ -11,6 +11,9 @@
         <%= image_tag @fightpost.picture.url if @fightpost.picture? %>
         <%= link_to @fightpost.content, @fightpost %></p>
       </span>
+      <span class="tag">
+        Tags: <%= @fightpost.tag_list %>
+      </span>
       <span class="timestamp">
         Posted <%= time_ago_in_words(@fightpost.created_at) %> ago.
         <% if current_user?(@fightpost.user) %>

@@ -9,6 +9,8 @@ class Fightpost < ActiveRecord::Base
   validates :content, presence: true, length: { maximum: 260 }
   validate :picture_size
 
+  acts_as_taggable
+
   private
 
   def picture_size

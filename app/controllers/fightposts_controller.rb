@@ -30,7 +30,7 @@ class FightpostsController < ApplicationController
   private
 
   def fightpost_params
-    params.require(:fightpost).permit(:content, :picture)
+    params.require(:fightpost).permit(:content, :picture, :tag_list)
   end
 
   def correct_user

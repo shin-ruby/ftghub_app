@@ -1,12 +1,21 @@
 <% provide(:title, "Home") %>
 
 <% if user_signed_in? %>
-  <h3>Share your show!</h3>
-	<%= link_to (fa_icon "camera-retro", text: "Show here..."), new_fightpost_path, class: "btn btn-sm btn-info" %>
-  <h3>Fightpost Feed</h3>
-  <%= render 'shared/feed' %>
+	<div class="row">
+	  <div class="col-md-7">
+		  <h3>Share your show!</h3>
+			<%= link_to (fa_icon "camera-retro", text: "Show here..."), new_fightpost_path, class: "btn btn-sm btn-info" %>
+		  <h3>Fightpost Feed</h3>
+		  <%= render 'shared/feed' %>
+		</div>
 
-
+		<div class="col-md-2" id="tag_cloud">
+			<h3>Tags</h3>
+			<% tag_cloud Fightpost.tag_counts, %w[s m l] do |tag, css_class| %>
+				<%= link_to tag.name, tag_path(tag.name), class: css_class %>
+			<% end %>
+    </div>
+  </div>
 <% else %>
 	<h1>Fighting Technology Group Hub App</h1>
 

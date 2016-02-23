@@ -24,7 +24,9 @@ end
 users = User.order(:created_at).take(6)
 50.times do
   content = Faker::Lorem.sentence(5)
-  users.each { |user| user.fightposts.create!(content: content) }
+  tag = ['Aikido', 'Karate', 'Taekwondo', 'Thai boxing', 'Boxing', 'Tai Chi', 'Sanda', 'Kendo', 
+          'Wing Chun', 'Judo', '八极拳'].sample
+  users.each { |user| user.fightposts.create!(content: content, tag_list: tag) }
 end
 
 # Following relationships

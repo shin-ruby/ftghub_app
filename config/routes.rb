@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :relationships, only: [:create, :destroy]
   resources :profiles
   resources :likers, only: [:create, :destroy]
+  get 'tags/:tag', to: 'static_pages#home', as: :tag
 
   # get ':id' => 'users#show', as: :user_profile
   # get ':id/setting' => 'users#edit', as: :user_setting

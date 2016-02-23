@@ -18,6 +18,7 @@ gem 'faker', '~> 1.6.1'
 gem 'bootstrap-will_paginate'
 gem 'carrierwave',             '~> 0.10.0'
 gem 'mini_magick',             '~> 4.4.0'
+gem 'acts-as-taggable-on'
 
 gem 'devise'
 gem 'cancancan'

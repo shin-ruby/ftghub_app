@@ -1,6 +1,7 @@
 <%= simple_form_for(@fightpost, html: { multipart: true }) do |f| %>
 	<%= f.input :picture, accept: 'image/jpeg, image/gif, image/png' %>
   <%= f.input :content, as: :text, required: true, placeholder: "Write something..." %>
+  <%= f.input :tag_list, label: 'Tags' %>
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
 
