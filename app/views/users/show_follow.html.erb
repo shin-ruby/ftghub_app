@@ -6,7 +6,6 @@
       <%= image_tag("user.jpg", size: "80", alt: @user.name, class: "gravatar") %>
       <h1><%= @user.name %></h1>
       <span><%= link_to "view my profile", @user %></span>
-      <span><b>Fightposts:</b> <%= @user.fightposts.count %></span>
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>

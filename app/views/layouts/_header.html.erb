@@ -17,13 +17,6 @@
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to "Users", users_path %></li>
-              <li>
-                <% if current_profile? %>
-                  <%= link_to "New Profile", new_profile_path %>
-                <% else %>
-                  <%= link_to "Profile", profile_path(current_profile) %>
-                <% end %>
-              </li>
               <li><%= link_to "Show", user_path(current_user) %></li>
               <li><%= link_to 'Edit password', edit_user_registration_path %></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>

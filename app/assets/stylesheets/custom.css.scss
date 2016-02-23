@@ -235,7 +235,9 @@ aside {
   button:visited {
      border: none; outline:none;
   }
-
+  .heart-active {
+    color: $gray-light;
+  }
 }
 
 

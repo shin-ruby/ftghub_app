@@ -9,8 +9,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @fightposts = @user.fightposts.paginate(page: params[:page])
-
-    @profile = Profile.find_by(user_id: @user)
+    @profile = @user.profile
   end
 
   def destroy

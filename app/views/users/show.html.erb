@@ -12,16 +12,21 @@
       <%= render 'shared/stats' %>
     </section>
     <section class="stats">
+      <%= render 'follow_form' if user_signed_in? %>
+    </section>
+    <section class="stats">
       <% if @profile.nil? %>
-        <%= link_to "Not Profile" %>
+        暂时无资料!
       <% else %>
-        <%= link_to "Show Profile", profile_path(@profile) %>
+        <%= @profile.introduction %>
+      <% end %>
+      <% if user_signed_in? && @user == current_user %>
+        <p><%= link_to "Edit Profile", edit_profile_path(current_user) %></p>
       <% end %>
     </section>
   </aside>
 
   <div class="col-md-8">
-    <%= render 'follow_form' if user_signed_in? %>
     <% if @user.fightposts.any? %>
       <h3>Fightposts (<%= @user.fightposts.count %>)</h3>
       <ol class="fightposts">

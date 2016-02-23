@@ -43,4 +43,5 @@ module ApplicationHelper
       @fightpost
     end
   end
+
 end
