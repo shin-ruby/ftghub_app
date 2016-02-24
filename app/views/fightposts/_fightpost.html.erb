@@ -25,7 +25,7 @@
         <%# @fightpost = fightpost %>
 
         <li><i class="fa fa-heart"></i>289  <%#= render 'fightposts/like_form' %></li>
-        <li><%= link_to (fa_icon "comment"), fightpost %><%= comment_count(fightpost) %></li>
+        <li><%= link_to (fa_icon "comment"), fightpost %><%= fightpost.comments_count -%></li>
         <li><i class="fa fa-share-square-o"></i></li>
       </ul>
     </span>

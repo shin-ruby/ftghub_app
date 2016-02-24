@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223061013) do
+ActiveRecord::Schema.define(version: 20160224133231) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
@@ -28,9 +28,10 @@ ActiveRecord::Schema.define(version: 20160223061013) do
   create_table "fightposts", force: :cascade do |t|
     t.text     "content"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.string   "picture"
+    t.integer  "comments_count", default: 0
   end
 
   add_index "fightposts", ["user_id", "created_at"], name: "index_fightposts_on_user_id_and_created_at"
