@@ -1,5 +1,5 @@
 class Comment < ActiveRecord::Base
-  belongs_to :fightpost
+  belongs_to :fightpost, counter_cache: true
   belongs_to :user
   default_scope -> { order(created_at: :desc) }
 
