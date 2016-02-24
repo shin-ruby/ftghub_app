@@ -1,7 +1,6 @@
 class Comment < ActiveRecord::Base
   belongs_to :fightpost, counter_cache: true
   belongs_to :user
-  default_scope -> { order(created_at: :desc) }
 
   validates :user_id, presence: true
   validates :fightpost_id, presence: true
