@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class CommentTest < ActiveSupport::TestCase
-  
+
 	def setup
 		@user = users(:michael)
 		fightpost = 1
@@ -18,7 +18,7 @@ class CommentTest < ActiveSupport::TestCase
 	end
 
 	test "fightpost id should be present" do
-		@comment.fightpost_id = nil 
+		@comment.fightpost_id = nil
 		assert_not @comment.valid?
 	end
 
@@ -33,7 +33,7 @@ class CommentTest < ActiveSupport::TestCase
 	end
 
 	test "order should be most recent first" do
-		assert_equal Comment.first,  comments(:most_recent_comment)
+		assert_equal Comment.recent.first,  comments(:most_recent_comment)
 	end
 
 end
