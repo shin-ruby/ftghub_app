@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   resources :profiles
   resources :likers, only: [:create, :destroy]
   get 'tags/:tag', to: 'static_pages#home', as: :tag
+
+  # Serve websocket cable requests in-process
+  # mount ActionCable.server => '/cable'
 end
