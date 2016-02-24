@@ -21,12 +21,10 @@
         <%= @profile.introduction %>
       <% end %>
 
-      <% if current_user.profile.nil? && @user == current_user %>
-        <p><%= link_to "New Profile", new_profile_path %></p>
-      <% elsif user_signed_in? && @user == current_user %>
+      <% if user_signed_in? -%>
         <p><%= link_to "Edit Profile", edit_profile_path(current_user) %></p>
       <% else %>
-        
+        <p><%= link_to "New Profile", new_profile_path %></p>
       <% end %>
     </section>
   </aside>
