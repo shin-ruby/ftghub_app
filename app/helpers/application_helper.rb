@@ -40,7 +40,7 @@ module ApplicationHelper
     if !params[:id].nil?
       params[:id]
     else
-      @fightpost
+      @fightpost.id
     end
   end
 

@@ -12,7 +12,12 @@ class LikersController < ApplicationController
   end
 
   def destroy
-    fightpost_id = Liker.find(params[:id]).fightpost_id
+    if !params[:id].nil?
+      fightpost_id = Liker.find(params[:id]).fightpost_id
+    else
+      fightpost_id = Liker.find(params[:fightpost])
+    end
+    #fightpost_id = Liker.find(params[:id]).fightpost_id
     current_user.likers.find_by(fightpost_id: fightpost_id).destroy
     @fightpost = Fightpost.find(fightpost_id)
 

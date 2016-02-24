@@ -5,10 +5,10 @@ class ProfilesController < ApplicationController
   def index
   end
 
-  def show
-    @user = User.find(params[:id])
-    @profile = @user.profile
-  end
+  # def show
+  #   @user = User.find(params[:id])
+  #   @profile = @user.profile
+  # end
 
   def new
     @profile = current_user.build_profile

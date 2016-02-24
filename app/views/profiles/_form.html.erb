@@ -1,4 +1,5 @@
 <%= simple_form_for(@profile, html: { multipart: true }) do |f| %>
+
 	<%= f.input :avatar, accept: 'image/jpeg, image/gif, image/png' %>
 	<%= f.input :fullname %>
 	<%= f.input :sex, as: :radio_buttons,
@@ -6,8 +7,6 @@
   <%= f.input :birthday %>
   <%= f.input :tel %>
   <%= f.input :introduction, as: :text, required: true, placeholder: "Write something..." %>
-  
-
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
 

@@ -62,6 +62,11 @@ p {
   line-height: 1.7em;
 }
 
+i {
+  padding-right: 6px;
+}
+
+
 
 /* header */
 
@@ -176,17 +181,24 @@ aside {
   padding: 0;
 }
 
+.show-follow {
+  margin-bottom: 20px;
+}
+
+
+
 /* Users index */
 
 .users {
   list-style: none;
   margin: 0;
-  li {
+  .fa {
     overflow: auto;
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
 
 /* fightposts */
 
