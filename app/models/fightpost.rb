@@ -1,4 +1,4 @@
-class Fightpost < ActiveRecord::Base
+class Fightpost < ApplicationRecord
   has_many :comments, -> { order(:id) }, dependent: :destroy
   has_many :likers, dependent: :destroy
   belongs_to :user
