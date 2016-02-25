@@ -31,7 +31,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'faker', '~> 1.6.1'
 gem 'carrierwave',             '~> 0.10.0'
 gem 'mini_magick',             '~> 4.4.0'
-gem 'acts-as-taggable-on'
+gem 'acts-as-taggable-on', git: 'https://github.com/mbleigh/acts-as-taggable-on'
 
 gem 'devise', git: 'https://github.com/plataformatec/devise'
 # Use Redis adapter to run Action Cable in production
