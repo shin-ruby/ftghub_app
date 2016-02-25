@@ -1,6 +1,4 @@
 class Liker < ApplicationRecord
-	belongs_to :user
-	belongs_to :fightpost
-	validates :user_id, presence: true
-	validates :fightpost_id, presence: true
+  belongs_to :user
+  belongs_to :fightpost
 end

@@ -12,7 +12,7 @@ class FightpostTest < ActiveSupport::TestCase
   end
 
   test "user id should be present" do
-    @fightpost.user_id = nil
+    @fightpost.user = nil
     assert_not @fightpost.valid?
   end
 
