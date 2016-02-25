@@ -46,7 +46,7 @@ gem 'bcrypt', '~> 3.1.10'
 gem 'web-console', '~> 3.1.1', group: :development
 
 group :test do
-  gem 'minitest-reporters', '~> 1.1.7'
+  gem 'minitest'
   gem 'mini_backtrace', '~> 0.1.3'
   gem 'guard'
   gem 'guard-minitest', '~> 2.4.4'
