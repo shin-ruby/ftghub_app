@@ -20,10 +20,8 @@ class User < ApplicationRecord
   has_one :profile, dependent: :destroy
   has_many :likers, dependent: :destroy
 
-  # TODO: use where.or after upgrade to Rails 5
   def feed
-    following_ids = 'SELECT followed_id FROM relationships WHERE follower_id = :user_id'
-    Fightpost.where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: id)
+    Fightpost.where(user: self).or(Fightpost.where(user: following))
   end
 
   def follow(other_user)
