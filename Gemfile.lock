@@ -147,8 +147,6 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     puma (2.16.0)
-    quiet_assets (1.1.0)
-      railties (>= 3.1, < 5.0)
     rack (2.0.0.alpha)
       json
     rack-test (0.6.3)
@@ -256,7 +254,6 @@ DEPENDENCIES
   minitest
   pg (~> 0.18.4)
   puma
-  quiet_assets
   rails (~> 5.0.0.beta3)
   sass-rails (~> 5.0)
   simple_form

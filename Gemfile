@@ -54,7 +54,6 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'spring', platforms: :ruby
-  gem 'quiet_assets'
 end
 
 group :production do
