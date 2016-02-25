@@ -1,4 +1,4 @@
-class Liker < ActiveRecord::Base
+class Liker < ApplicationRecord
 	belongs_to :user
 	belongs_to :fightpost
 	validates :user_id, presence: true

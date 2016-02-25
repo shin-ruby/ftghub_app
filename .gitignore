@@ -13,8 +13,9 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
+/tmp/*
 !/log/.keep
-/tmp
+!/tmp/.keep
 
 # Ignore Spring files.
 /spring/*.pid
@@ -22,6 +23,8 @@
 # Ignore uploaded test images.
 /public/uploads
 
+# Ignore sublime workspace
 *.sublime-workspace
 
+# Ignore Byebug command history file.
 .byebug_history
