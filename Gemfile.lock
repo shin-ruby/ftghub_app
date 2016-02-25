@@ -53,7 +53,6 @@ GEM
       railties (>= 3.1)
     builder (3.2.2)
     byebug (8.2.2)
-    cancancan (1.13.1)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -237,7 +236,6 @@ DEPENDENCIES
   bootstrap-will_paginate
   bootswatch-rails
   byebug
-  cancancan
   carrierwave (~> 0.10.0)
   coffee-rails (~> 4.1.0)
   devise

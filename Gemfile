@@ -34,7 +34,6 @@ gem 'mini_magick',             '~> 4.4.0'
 gem 'acts-as-taggable-on'
 
 gem 'devise'
-gem 'cancancan'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 
