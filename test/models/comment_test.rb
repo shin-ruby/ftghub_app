@@ -4,8 +4,8 @@ class CommentTest < ActiveSupport::TestCase
 
 	def setup
 		@user = users(:michael)
-		fightpost = 1
-		@comment = @user.comments.build(content: "Good Job", fightpost_id: fightpost)
+		@fightpost = fightposts(:orange)
+		@comment = @user.comments.build(content: 'Good Job', fightpost: @fightpost)
 	end
 
 	test "should be valid" do
@@ -13,7 +13,7 @@ class CommentTest < ActiveSupport::TestCase
 	end
 
 	test "user id should be present" do
-		@comment.user_id = nil
+		@comment.user = nil
 		assert_not @comment.valid?
 	end
 
