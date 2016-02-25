@@ -47,7 +47,6 @@ gem 'web-console', '~> 3.1.1', group: :development
 
 group :test do
   gem 'minitest'
-  gem 'mini_backtrace', '~> 0.1.3'
   gem 'guard'
   gem 'guard-minitest', '~> 2.4.4'
 end
