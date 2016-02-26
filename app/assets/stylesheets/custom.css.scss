@@ -16,6 +16,12 @@ $gray-lighter: #EEEEEE;
 
 /* universal */
 
+html {
+  position: relative;
+  min-height: 100%;
+  font-family:Helvetica,Tahoma,Arial,STXihei,"华文细黑","MicrosoftYaHei","微软雅黑",SimSun,"宋体",Heiti,"黑体",sans-serif;
+}
+
 body {
   padding-top: 60px;
 }
@@ -66,6 +72,13 @@ i {
   padding-right: 6px;
 }
 
+.alert .close {
+  margin-top: -2px;
+}
+
+.menu {
+  font-weight: bold;
+}
 
 
 /* header */
