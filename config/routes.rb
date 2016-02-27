@@ -17,17 +17,10 @@ Rails.application.routes.draw do
   resource :profile, only: [:create, :edit, :update]
   resources :likers, only: [:create, :destroy]
   get 'tags/:tag', to: 'static_pages#home', as: :tag
-<<<<<<< HEAD
-
-
 
   resources :users, path: '', as: 'users' do
     member do
       get :fightposts
-      get :profiles
     end
   end
-
-=======
->>>>>>> 1ebd45295882c714cead642c7f42087f422aef82
 end
