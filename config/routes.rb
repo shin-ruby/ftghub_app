@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :relationships, only: [:create, :destroy]
-  resources :profiles
+  resources :profiles, except: [:show]
   resources :likers, only: [:create, :destroy]
   get 'tags/:tag', to: 'static_pages#home', as: :tag
 

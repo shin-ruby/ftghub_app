@@ -5,11 +5,6 @@ class ProfilesController < ApplicationController
   def index
   end
 
-  # def show
-  #   @user = User.find(params[:id])
-  #   @profile = @user.profile
-  # end
-
   def new
     @profile = current_user.build_profile
   end
@@ -18,7 +13,7 @@ class ProfilesController < ApplicationController
     @profile = current_user.build_profile(profile_params)
     if @profile.save
       flash[:success] = 'Profile created!'
-      redirect_to @profile
+      redirect_to @profile.user
     else
       render 'new'
     end
@@ -32,13 +27,12 @@ class ProfilesController < ApplicationController
   def update
     @user = User.find(params[:id])
     @profile = @user.profile
- 
+
     if @profile.update(profile_params)
-      redirect_to @profile
+      redirect_to @profile.user
     else
       render 'edit'
     end
-
   end
 
   private
