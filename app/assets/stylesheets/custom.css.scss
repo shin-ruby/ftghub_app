@@ -97,6 +97,20 @@ i {
   }
 }
 
+#logo-icon {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.6em;
+  color: #CC0066;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: $gray-light;
+    text-decoration: none;
+  }
+}
+
 /* footer */
 
 footer {
@@ -289,6 +303,52 @@ span.picture {
   .m { font-size: 1.2em; }
   .l { font-size: 1.8em; }
 }
+
+/* homepro */
+
+.home {
+  text-align: center;
+
+  .slogan{
+    margin-bottom: 40px;
+    h1 {
+      margin-bottom: 30px;
+      font-size: 46px;
+      color: #000000;
+    }
+  }
+  .logo {
+    margin-bottom: 60px;
+    color: #CC0066;
+  }
+  .photo {
+    margin-bottom: 3px;
+  }
+  li {
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-bottom: -4px;
+    margin-top: -4px;
+  }
+  blockquote {
+    width: 404px;
+    text-align: left;
+  }
+}
+
+
+/* Log in */
+
+.login {
+  .weixin {
+    margin-top: 23px;
+    margin-left: 40px;
+  }
+}
+
+
+
+
 
 
 
