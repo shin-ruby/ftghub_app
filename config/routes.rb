@@ -8,14 +8,12 @@ Rails.application.routes.draw do
     member do
       get :following, :followers
     end
-    #resources :profiles
   end
   resources :fightposts do
     resources :comments
   end
   resources :relationships, only: [:create, :destroy]
-  resources :profiles
+  resource :profile, only: [:create, :edit, :update]
   resources :likers, only: [:create, :destroy]
   get 'tags/:tag', to: 'static_pages#home', as: :tag
-
 end

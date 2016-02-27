@@ -18,7 +18,7 @@ module FtghubApp
         g.helper         false
     end
 
-    config.time_zone = 'Beijing'
+    config.time_zone = 'Asia/Shanghai'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]

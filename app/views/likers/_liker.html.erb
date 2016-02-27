@@ -1,6 +1,5 @@
 <%= form_for(current_user.likers.build, remote: true) do |f| %>
   <%= hidden_field_tag :fightpost_id, @fightpost.id %>
-	<%#= f.submit "Like", class: "btn btn-link" %>
 	<%= button_tag(type: 'submit', class: "btn-link") do %>
 	   <%= content_tag(:i, nil, class: "fa fa-heart heart-active") %><%= Liker.where(fightpost_id: @fightpost).count %>
 	<% end %>

@@ -1,7 +1,7 @@
 <div id="like_form">
 	<% if current_user.likers.find_by(fightpost_id: liker_fightpost)  %>
-		<%= render 'fightposts/unliker' %>
+		<%= render 'likers/unliker' %>
 	<% else %>
-		<%= render 'fightposts/liker' %>
+		<%= render 'likers/liker' %>
 	<% end %>
 </div>

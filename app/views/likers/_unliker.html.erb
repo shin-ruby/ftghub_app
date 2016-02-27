@@ -1,7 +1,6 @@
-<%= form_for(current_user.likers.find_by(fightpost_id: @fightpost.id), 
+<%= form_for(current_user.likers.find_by(fightpost_id: @fightpost.id),
 						 html: { method: :delete }, remote: true) do |f| %>
-						 
 	<%= button_tag(type: 'submit', class: "btn-link") do %>
 	   <%= content_tag(:i, nil, class: "fa fa-heart") %><%= Liker.where(fightpost_id: @fightpost).count %>
-	<% end %>	
+	<% end %>
 <% end %>
