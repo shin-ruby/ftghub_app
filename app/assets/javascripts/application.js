@@ -15,3 +15,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  var check_upload_file_size = function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 3) {
+      alert('Maximum file size is 3MB. Please choose a smaller file.');
+    }
+  }
+
+  $('#fightpost_picture').change(check_upload_file_size);
+  $('#profile_avatar').change(check_upload_file_size);
+});
