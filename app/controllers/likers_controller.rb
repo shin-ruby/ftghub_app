@@ -1,10 +1,9 @@
 class LikersController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_fightpost
 
   def create
-    @fightpost = Fightpost.find(params[:fightpost_id])
     current_user.likers.create(fightpost_id: @fightpost.id)
-
     respond_to do |format|
       format.html { redirect_to @fightpost }
       format.js
@@ -12,18 +11,16 @@ class LikersController < ApplicationController
   end
 
   def destroy
-    if !params[:id].nil?
-      fightpost_id = Liker.find(params[:id]).fightpost_id
-    else
-      fightpost_id = Liker.find(params[:fightpost])
-    end
-    #fightpost_id = Liker.find(params[:id]).fightpost_id
-    current_user.likers.find_by(fightpost_id: fightpost_id).destroy
-    @fightpost = Fightpost.find(fightpost_id)
-
+    Liker.find(params[:id]).destroy
     respond_to do |format|
       format.html { redirect_to @fightpost }
       format.js
     end
+  end
+
+  private
+
+  def set_fightpost
+    @fightpost = Fightpost.find(params[:fightpost_id])
   end
 end

@@ -11,11 +11,11 @@ Rails.application.routes.draw do
     end
   end
   resources :fightposts do
-    resources :comments
+    resources :comments, only: [:create, :destroy]
+    resources :likers, only: [:create, :destroy]
   end
   resources :relationships, only: [:create, :destroy]
   resource :profile, only: [:create, :edit, :update]
-  resources :likers, only: [:create, :destroy]
   get 'tags/:tag', to: 'static_pages#home', as: :tag
 
   resources :users, path: '', as: 'users' do
