@@ -7,6 +7,7 @@ $gray-light: #777777;
 $gray: #666666;
 $gray-darker: #222222;
 $gray-lighter: #EEEEEE;
+$logo-color: #CC0000;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -101,7 +102,7 @@ i {
   float: left;
   margin-right: 10px;
   font-size: 1.6em;
-  color: #CC0066;
+  color: $logo-color;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
@@ -109,6 +110,12 @@ i {
     color: $gray-light;
     text-decoration: none;
   }
+}
+
+#logo-icon-2 {
+  float: left;
+  margin-top: 6px;
+  margin-right: 10px;
 }
 
 /* footer */
@@ -319,7 +326,7 @@ span.picture {
   }
   .logo {
     margin-bottom: 60px;
-    color: #CC0066;
+    color: $logo-color;
   }
   .photo {
     margin-bottom: 3px;
@@ -329,6 +336,9 @@ span.picture {
     margin-right: -5px;
     margin-bottom: -4px;
     margin-top: -4px;
+    img {
+      padding: 28px;
+    }
   }
   blockquote {
     width: 404px;
