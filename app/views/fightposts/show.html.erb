@@ -25,7 +25,7 @@
     <span class="social-action">
       <ul class="list-inline">
         <li><%= render 'likers/like_form' %></li>
-        <li><%= link_to (fa_icon "comment"), @fightpost %><%= @fightpost.comments_count -%></li>
+        <li><%= link_to (fa_icon "comment"), @fightpost %><%= @fightpost.comments.count -%></li>
         <li><i class="fa fa-share-square-o"></i></li>
       </ul>
     </span>
