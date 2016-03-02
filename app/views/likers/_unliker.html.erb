@@ -1,6 +1,3 @@
-<%= form_for [@fightpost, @fightpost.likers.find_by(user: current_user)],
-						 html: { method: :delete }, remote: true do |f| %>
-	<%= button_tag(type: 'submit', class: "btn-link") do %>
-	   <%= content_tag(:i, nil, class: "fa fa-heart") %><%= Liker.where(fightpost_id: @fightpost).count %>
-	<% end %>
+<%= button_to [@fightpost, @fightpost.likers.find_by(user: current_user)], class: 'btn-link', method: :delete, remote: true do %>
+  <i class="fa fa-heart"></i><%= Liker.where(fightpost: @fightpost).count %>
 <% end %>
