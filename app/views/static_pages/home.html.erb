@@ -2,14 +2,14 @@
 
 <% if user_signed_in? %>
 	<div class="row">
-	  <div class="col-md-7">
+	  <div class="col-md-12">
 		  <h3>Share your show!</h3>
-			<%= link_to (fa_icon "camera-retro", text: "Show here..."), new_fightpost_path, class: "btn btn-sm btn-info" %>
+			<%= link_to (fa_icon "camera-retro", text: "Show here..."), new_fightpost_path, class: "btn btn-sm btn-default" %>
 		  <h3>Fightpost Feed</h3>
 		  <%= render 'shared/feed' %>
 		</div>
 
-		<div class="col-md-2" id="tag_cloud">
+		<div class="col-md-3" id="tag_cloud">
 			<h3>Tags</h3>
 			<% tag_cloud Fightpost.tag_counts, %w[s m l] do |tag, css_class| %>
 				<%= link_to tag.name, tag_path(tag.name), class: css_class %>
@@ -17,19 +17,6 @@
     </div>
   </div>
 <% else %>
-	<h1>Fighting Technology Group Hub</h1>
-
-	<div class="center jumbotron">
-	  <h1>Welcome to the Fighting Technology Group Hub</h1>
-
-	  <h2>
-	    This is the home page for the Fighting Technology Group Hub application.
-	  </h2>
-
-	  <%= link_to "Sign up now!", "#", class: "btn btn-lg btn-primary" %>
-	</div>
-
-	<%= link_to image_tag("rails.png", alt: "Rails logo"),
-	            'http://rubyonrails.org/' %>
+	<%= render 'welcome' %>
 <% end %>
 

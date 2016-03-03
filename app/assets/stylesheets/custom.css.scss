@@ -100,21 +100,7 @@ i {
 
 #logo-icon {
   float: left;
-  margin-right: 10px;
-  font-size: 1.6em;
-  color: $logo-color;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  &:hover {
-    color: $gray-light;
-    text-decoration: none;
-  }
-}
-
-#logo-icon-2 {
-  float: left;
-  margin-top: 6px;
+  margin-top: 7px;
   margin-right: 10px;
 }
 
@@ -345,6 +331,20 @@ span.picture {
     text-align: left;
   }
 }
+
+/* feefpro */
+
+.thumbnail {
+  hr {
+    margin-bottom: 6px;
+    margin-top: 12px;
+  }
+  .media-body {
+    padding-top: 2px;
+  }
+}
+
+
 
 
 /* Log in */

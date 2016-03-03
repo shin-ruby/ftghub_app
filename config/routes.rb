@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'static_pages#home'
   get 'about' => 'static_pages#about'
-  get 'homepro' => 'static_pages#homepro'
+  get 'feedpro' => 'static_pages#feedpro'
 
   devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' }
   resources :users do

@@ -12,8 +12,8 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def homepro
-    
+  def feedpro
+    #暂时的页面
   end
 
 end
