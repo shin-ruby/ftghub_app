@@ -22,7 +22,7 @@
       <% end %>
 
       <% if user_signed_in? && @user == current_user -%>
-          <p><%= link_to "Edit Profile", edit_profile_path %></p>
+          <p><%= link_to "Edit Profile", profile_path %></p>
       <% end -%>
     </section>
   </aside>

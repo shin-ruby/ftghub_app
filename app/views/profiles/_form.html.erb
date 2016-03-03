@@ -1,5 +1,4 @@
-<%= simple_form_for(@profile, html: { multipart: true }) do |f| %>
-
+<%= simple_form_for @profile, url: profile_path, html: { multipart: true } do |f| %>
 	<%= f.input :avatar, accept: 'image/jpeg, image/gif, image/png' %>
 	<%= f.input :fullname %>
 	<%= f.input :sex, as: :radio_buttons,
