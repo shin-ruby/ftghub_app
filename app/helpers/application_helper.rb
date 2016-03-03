@@ -27,13 +27,4 @@ module ApplicationHelper
   def current_profile
     Profile.find_by(user_id: current_user).id
   end
-
-  def liker_fightpost
-    if !params[:id].nil?
-      params[:id]
-    else
-      @fightpost.id
-    end
-  end
-
 end

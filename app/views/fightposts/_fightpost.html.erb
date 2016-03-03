@@ -22,8 +22,8 @@
     </div>
     <span class="social-action">
       <ul class="list-inline">
-        <li><i class="fa fa-heart"></i>289</li>
-        <li><%= link_to (fa_icon "comment"), fightpost %><%= fightpost.comments_count -%></li>
+        <li><i class="fa fa-heart"></i><%= fightpost.likers.count -%></li>
+        <li><%= link_to (fa_icon "comment"), fightpost %><%= fightpost.comments.count -%></li>
         <li><i class="fa fa-share-square-o"></i></li>
       </ul>
     </span>
