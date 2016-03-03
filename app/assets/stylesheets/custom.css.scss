@@ -335,6 +335,30 @@ span.picture {
 /* feefpro */
 
 .thumbnail {
+  .thumbnail-img {
+    overflow: hidden;
+    height: 172px;
+    opacity: 0.9;
+  }
+  .content {
+    background-color: #FFF;
+    position: relative;
+    height: 172px;
+    margin-top: -172px;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+    }
+    padding: 4px;
+
+    span {
+      position:absolute;
+      top: 150px;
+      display: block;
+    }
+
+  }
+
   hr {
     margin-bottom: 6px;
     margin-top: 12px;
