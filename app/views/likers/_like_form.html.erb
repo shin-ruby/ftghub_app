@@ -1,5 +1,7 @@
 <div id="like_form_<%= fightpost.id -%>">
-	<% if current_user.likers.find_by(fightpost: fightpost)  %>
+  <% if current_user.blank? %>
+    <i class="fa fa-heart"></i><%= fightpost.likers.count -%>
+	<% elsif current_user.likers.find_by(fightpost: fightpost) %>
 		<%= render partial: 'likers/unliker', locals: { fightpost: fightpost } -%>
 	<% else %>
 		<%= render partial: 'likers/liker', locals: { fightpost: fightpost } -%>
