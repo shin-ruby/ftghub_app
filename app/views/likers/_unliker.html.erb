@@ -1,3 +1,3 @@
-<%= button_to [@fightpost, @fightpost.likers.find_by(user: current_user)], class: 'btn-link', method: :delete, remote: true do %>
-  <i class="fa fa-heart"></i><%= @fightpost.likers.count -%>
+<%= button_to [fightpost, fightpost.likers.find_by(user: current_user)], class: 'btn-link', method: :delete, remote: true do %>
+  <i class="fa fa-heart"></i><%= fightpost.likers.count -%>
 <% end %>

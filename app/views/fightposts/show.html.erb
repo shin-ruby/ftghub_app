@@ -24,7 +24,7 @@
     </div>
     <span class="social-action">
       <ul class="list-inline">
-        <li><%= render 'likers/like_form' %></li>
+        <li><%= render partial: 'likers/like_form', locals: { fightpost: @fightpost } -%></li>
         <li><%= link_to (fa_icon "comment"), @fightpost %><%= @fightpost.comments.count -%></li>
         <li><i class="fa fa-share-square-o"></i></li>
       </ul>

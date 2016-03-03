@@ -1,1 +1,1 @@
-$("#like_form").html("<%= j render('unliker') -%>");
+$("#like_form_<%= @fightpost.id -%>").html("<%= j render(partial: 'likers/unliker', locals: { fightpost: @fightpost }) -%>");
