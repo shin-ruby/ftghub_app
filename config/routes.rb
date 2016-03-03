@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resources :likers, only: [:create, :destroy]
   end
   resources :relationships, only: [:create, :destroy]
-  resource :profile, only: [:create, :edit, :update]
+  resources :profiles
   get 'tags/:tag', to: 'static_pages#home', as: :tag
 
   resources :users, path: '', as: 'users' do
