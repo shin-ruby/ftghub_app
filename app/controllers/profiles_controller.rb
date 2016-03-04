@@ -1,10 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :authenticate_user!
 
-  def new
-    @profile = current_user.profile || current_user.build_profile
-  end
-
   def create
     @profile = current_user.build_profile(profile_params)
     if @profile.save
@@ -15,7 +11,7 @@ class ProfilesController < ApplicationController
     end
   end
 
-  def edit
+  def show
     @profile = current_user.profile || current_user.build_profile
   end
 
