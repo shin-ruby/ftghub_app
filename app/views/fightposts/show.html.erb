@@ -1,36 +1,6 @@
 <% provide(:title, "fighting show") %>
 
-<ul class="media-list">
-  <li class="media">
-    <div class="media-left">
-      <%= link_to image_tag("user.jpg", size: "50", class: "media-object"), @fightpost.user %>
-    </div>
-    <div class="media-body">
-      <h5 class="media-heading"><%= link_to @fightpost.user.name, @fightpost.user %></h5>
-      <span class="content">
-        <%= image_tag @fightpost.picture.url if @fightpost.picture? %>
-        <%= link_to @fightpost.content, @fightpost %></p>
-      </span>
-      <span class="tag">
-        Tags: <%= @fightpost.tag_list %>
-      </span>
-      <span class="timestamp">
-        Posted <%= time_ago_in_words(@fightpost.created_at) %> ago.
-        <% if current_user?(@fightpost.user) %>
-          <%= link_to "delete", @fightpost, method: :delete,
-                                           data: { confirm: "You sure?" } %>
-        <% end %>
-      </span>
-    </div>
-    <span class="social-action">
-      <ul class="list-inline">
-        <li><%= render 'likers/like_form' %></li>
-        <li><%= link_to (fa_icon "comment"), @fightpost %><%= @fightpost.comments.count -%></li>
-        <li><i class="fa fa-share-square-o"></i></li>
-      </ul>
-    </span>
-  </li>
-</ul>
+<%= render @fightpost %>
 
 <h2>Comments</h2>
 <%= render @fightpost.comments %>
