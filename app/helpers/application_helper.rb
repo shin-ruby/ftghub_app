@@ -1,13 +1,4 @@
 module ApplicationHelper
-  def full_title(page_title = '')
-    base_title = 'Fighting Technology Group Hub App'
-    if page_title.empty?
-      base_title
-    else
-      page_title + ' | ' + base_title
-    end
-  end
-
   def flash_class_name(name)
     case name
     when 'notice' then 'success'
