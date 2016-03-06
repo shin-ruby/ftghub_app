@@ -12,7 +12,7 @@
       <% if @users.any? %>
         <div class="user_avatars">
           <% @users.each do |user| %>
-            <%= gravatar_for user, size: 30 %>
+            <%= gravatar_tag user, :mini %>
           <% end %>
         </div>
       <% end %>
