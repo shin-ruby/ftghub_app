@@ -35,6 +35,8 @@ gem 'mini_magick',             '~> 4.4.0'
 gem 'acts-as-taggable-on', git: 'https://github.com/mbleigh/acts-as-taggable-on'
 
 gem 'devise', git: 'https://github.com/plataformatec/devise'
+gem 'devise-bootstrap-views'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 

@@ -83,6 +83,7 @@ GEM
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.1)
     debug_inspector (0.0.2)
+    devise-bootstrap-views (0.0.8)
     erubis (2.7.0)
     execjs (2.6.0)
     faker (1.6.3)
@@ -242,6 +243,7 @@ DEPENDENCIES
   carrierwave (~> 0.10.0)
   coffee-rails (~> 4.1.0)
   devise!
+  devise-bootstrap-views
   faker (~> 1.6.1)
   font-awesome-rails
   gravatarify
