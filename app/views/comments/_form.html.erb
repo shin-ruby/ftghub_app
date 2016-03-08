@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
-	<%= simple_form_for([@fightpost, @fightpost.comments.build]) do |f| %>
-	  <%= f.input :content %>
-	  <%= f.button :submit %>
+	<%= form_for [@fightpost, @fightpost.comments.build], layout: :inline do |f| %>
+	  <%= f.text_field :content, size: 50 -%>
+	  <%= f.submit %>
 	<% end %>
 <% else %>
 	<p>登录后评论</p>

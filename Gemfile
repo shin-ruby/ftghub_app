@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
+gem 'bh'
 
 gem 'font-awesome-rails'
 gem 'gravatarify'

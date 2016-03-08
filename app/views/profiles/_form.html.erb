@@ -1,10 +1,14 @@
-<%= simple_form_for @profile, url: profile_path, html: { multipart: true } do |f| %>
-	<%= f.input :avatar, accept: 'image/jpeg, image/gif, image/png' %>
-	<%= f.input :fullname %>
-	<%= f.input :sex, as: :radio_buttons,
-    collection: ['Male', 'Female'], wrapper: :vertical_radio_and_checkboxes %>
-  <%= f.input :birthday %>
-  <%= f.input :tel %>
-  <%= f.input :introduction, as: :text, required: true, placeholder: "Write something..." %>
-  <%= f.button :submit, class: "btn btn-primary" %>
+<%= form_for @profile, url: profile_path, layout: :horizontal, html: { multipart: true } do |f| %>
+	<%= f.file_field :avatar, accept: 'image/jpeg, image/gif, image/png' %>
+	<%= f.text_field :fullname %>
+<div class="form-group">
+  <label class="col-sm-3 control-label">Gender</label>
+  <div class="col-sm-9">
+    <%= f.collection_radio_buttons(:sex, [['Male', 'M'],['Female', 'F']], :second, :first) { |b| content_tag(:div, 'class' => 'radio') { b.label { b.radio_button(checked: @profile.sex == b.value) + "#{b.text}".html_safe } } } %>
+  </div>
+</div>
+  <%= f.date_field :birthday %>
+  <%= f.telephone_field :tel, suffix: '☏' %>
+  <%= f.text_area :introduction, required: true, placeholder: "Write something..." %>
+  <%= f.submit %>
 <% end %>
