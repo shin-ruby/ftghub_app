@@ -1,3 +1,7 @@
+@import "bootstrap-sprockets";
+@import "bootswatch/cosmo/variables";
+@import "bootstrap";
+
 /* universal */
 
 /* mixins, variables, etc. */
@@ -84,6 +88,15 @@ i {
 
 /* header */
 
+.navbar-default {
+  background-color: #222222;
+  border-color: #eeeeee;
+}
+
+.nav-left {
+  margin-left: 160px;
+}
+
 #logo {
   float: left;
   margin-right: 10px;
@@ -99,9 +112,8 @@ i {
 }
 
 #logo-icon {
+  position:absolute;
   float: left;
-  margin-top: 7px;
-  margin-right: 10px;
 }
 
 /* footer */
