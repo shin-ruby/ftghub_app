@@ -285,7 +285,7 @@ aside {
   }
 }
 
-#like_form {
+.like_form {
   button {
       border: 0px
   }
@@ -295,7 +295,7 @@ aside {
      border: none; outline:none;
   }
   .heart-active {
-    color: $gray-light;
+    color: #ff0000;
   }
 }
 
