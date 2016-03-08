@@ -27,7 +27,6 @@ gem 'bootswatch-rails'
 gem 'font-awesome-rails'
 gem 'gravatarify'
 
-gem 'simple_form'
 gem 'will_paginate-bootstrap'
 gem 'will_paginate', '~> 3.1.0'
 gem 'faker', '~> 1.6.1'
