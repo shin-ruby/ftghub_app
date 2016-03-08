@@ -24,7 +24,7 @@ $logo-color: #CC0000;
 html {
   position: relative;
   min-height: 100%;
-  font-family:Helvetica,Tahoma,Arial,STXihei,"华文细黑","MicrosoftYaHei","微软雅黑",SimSun,"宋体",Heiti,"黑体",sans-serif;
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'STHeiti Light [STXihei]', 'Microsoft Yahei', sans-serif;
 }
 
 body {
@@ -82,11 +82,18 @@ i {
 }
 
 .menu {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 
 /* header */
+
+.nav {
+  .avatar {
+    margin-top: -4px;
+  }
+}
+
 
 .navbar-default {
   background-color: #222222;
@@ -114,6 +121,12 @@ i {
 #logo-icon {
   position:absolute;
   float: left;
+}
+
+.dropdown {
+  b {
+    margin-left: 8px;
+  }
 }
 
 /* footer */
@@ -346,6 +359,56 @@ span.picture {
 
 /* feefpro */
 
+.user-info {
+  margin-top: -10px;
+  background-color: #FFF;
+  .media {
+    margin-top: 28px;
+    margin-bottom: 36px;
+    margin-left: 286px;
+    h4 {
+      position: absolute;
+      margin-top: 14px;
+    }
+    a {
+      margin-top: 20px;
+      font-size: 12px;
+      &:hover {
+        color: #C01925;
+      }
+    }
+    small {
+      display: block;
+    }
+    .btn {
+      margin-left: 110px;
+      margin-top: 16px;
+    }
+    .btn-info {
+        background-color: #C11925;
+        border-color: #C11925;
+    }
+  }
+  .avatar {
+    margin-top: 16px;
+  }
+  p {
+    margin-top: 40px;
+    margin-right: 120px;
+    font-size: 14px;
+  }
+}
+
+
+.home-feed {
+  background-color: #E6E6E6;
+  .date-time {
+    margin-left: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
 .thumbnail {
   .thumbnail-img {
     overflow: hidden;
@@ -368,7 +431,6 @@ span.picture {
       top: 150px;
       display: block;
     }
-
   }
 
   hr {

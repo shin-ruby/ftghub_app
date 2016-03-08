@@ -1,5 +1,46 @@
+<div class="row user-info">
+  <div class="col-md-6">
+  	<div class="media">
+		  <div class="media-left">
+		    <a href="#">
+		      <%= image_tag "index-1a", size: '80', class: "avatar" %>
+		    </a>
+		  </div>
+		  <div class="media-body">
+		    <h4>Shin Zhang</h4>
+		    <%= button_tag(type: 'submit', class: "btn btn-sm btn-info") do %>
+				   <%= fa_icon "plus", text: "Follow" %>
+				<% end %>
+		    <div class="stats">
+				  <a href="#">
+				    <small id="following" class="stat">
+				      230
+				    </small>
+				    following
+				  </a>
+				  <a href="#">
+				    <small id="followers" class="stat">
+				      2080
+				    </small>
+				    followers
+				  </a>
+				</div>
+		  </div>
+		</div>
+  </div>
+
+  <div class="col-md-6">
+  	<p>合气道是日本一种以巧制胜的武术，是一种根源于日本大东流合气柔术的近代武术，主要特点是在“以柔克刚”，“借劲使力”，“不主动攻击”。现在一般所称的合气道又分为日本与韩国两种流派，彼此在各自发展之下已有一些差异。</p>
+  </div>
+</div>
+
 <div class="row home-feed">
-  <div class="col-md-9">
+  <div class="col-md-9 col-md-offset-2">
+		<div class="row">
+		  <div class="col-md-12 date-time">
+		  	<h5>2016年3月10日</h5>
+		  </div>
+		</div>
 
   	<div class="col-md-3">
 	    <div class="thumbnail">
@@ -101,18 +142,6 @@
 	      </div>
 	    </div>
 	  </div>
-
-
-  </div>
-
-
-
-
-
-
-
-  <div class="col-md-3">
-  	
   </div>
 </div>
 

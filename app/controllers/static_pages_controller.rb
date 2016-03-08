@@ -14,6 +14,7 @@ class StaticPagesController < ApplicationController
 
   def feedpro
     #暂时的页面
+    render :layout => 'feed'
   end
 
 end
