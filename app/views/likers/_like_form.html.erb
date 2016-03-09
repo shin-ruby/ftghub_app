@@ -1,4 +1,4 @@
-<div id="like_form_<%= fightpost.id -%>">
+<div id="like_form_<%= fightpost.id -%>" class="like_form">
   <% if current_user.blank? %>
     <i class="fa fa-heart"></i><%= fightpost.likers.count -%>
 	<% elsif current_user.likers.find_by(fightpost: fightpost) %>
