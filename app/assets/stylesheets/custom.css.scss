@@ -403,9 +403,13 @@ span.picture {
 .home-feed {
   background-color: #E6E6E6;
   .date-time {
-    margin-left: 18px;
+    margin-left: 8px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+  }
+  .col-md-3 {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
@@ -414,6 +418,9 @@ span.picture {
     overflow: hidden;
     height: 172px;
     opacity: 0.9;
+    padding-top: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
   }
   .content {
     background-color: #FFF;
@@ -437,8 +444,11 @@ span.picture {
     margin-bottom: 6px;
     margin-top: 12px;
   }
-  .media-body {
-    padding-top: 2px;
+  a {
+    color: #C11925;
+    &:hover {
+      color: #C11925
+    }
   }
 }
 
