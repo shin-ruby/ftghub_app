@@ -23,11 +23,11 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'bootstrap-sass'
 gem 'bootswatch-rails'
+gem 'bh'
 
 gem 'font-awesome-rails'
 gem 'gravatarify'
 
-gem 'simple_form'
 gem 'will_paginate-bootstrap'
 gem 'will_paginate', '~> 3.1.0'
 gem 'faker', '~> 1.6.1'
@@ -36,6 +36,8 @@ gem 'mini_magick',             '~> 4.4.0'
 gem 'acts-as-taggable-on', git: 'https://github.com/mbleigh/acts-as-taggable-on'
 
 gem 'devise', git: 'https://github.com/plataformatec/devise'
+gem 'devise-bootstrap-views'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 
