@@ -1,13 +1,47 @@
 <footer class="footer">
-  <small>
-    The <a href="http://www.ftghub.com/">Fighting Technology Group Hub App</a>
-    by <a href="#">Shin Zhang</a> & <a href="#">Eric Guo</a>
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to "About",   '#' %></li>
-      <li><%= link_to "Contact", '#' %></li>
-      <li><a href="#">WeChat</a></li>
-    </ul>
-  </nav>
+  <div class="row">
+    <div class="col-md-5 foot-left">
+      <%= image_tag "ftglogo6", height: "40" %>
+      <p>在这里汇聚着一群普通的格斗技术爱好者</p>
+      <p>在这里有练习太极、八卦、拳击、空手道、跆拳道、剑道...等武者</p>
+      <p>在这里可以记录下你在格斗道路上的点滴</p>
+      <p>在这里通过分享、交流获得更多的乐趣</p>
+      <p>欢迎来到Fighting Technology Group Hub</p>
+      <small>
+        Copyright © 20015–2016 FTGHUB LLC. All screenshots © their respective owners. 
+      </small>
+    </div>
+    <div class="col-md-4 foot-center">
+      <div class="row">
+        <div class="col-md-4">
+          <ul class="list-unstyled">
+            <li><%= link_to "关于FTGHUB",   '#' %></li>
+            <li><%= link_to "联系我们", '#' %></li>
+            <li><%= link_to "团队", '#' %></li>
+            <li><%= link_to "加入我们", '#' %></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-unstyled">
+            <li><%= link_to "FTGHUB商城",   '#' %></li>
+            <li><%= link_to "广告投放", '#' %></li>
+            <li><%= link_to "赞助FTGHUB", '#' %></li>
+            <li><%= link_to "合作", '#' %></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-unstyled">
+            <li><%= link_to (fa_icon "weixin", text: "微信公众号"), "#", class: "btn btn-sm btn-success" %></li>
+            <li><%= link_to "腾讯视频", '#' %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 foot-right">
+      <small>
+        The <a href="http://www.ftghub.com/">FTGHUB</a>
+        by <a href="#">Shin Zhang</a> & <a href="#">Eric Guo</a>
+      </small>
+    </div>
+  </div>
 </footer>
