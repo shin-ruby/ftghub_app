@@ -1,5 +1,5 @@
 @import "bootstrap-sprockets";
-@import "bootswatch/cosmo/variables";
+/*@import "bootswatch/cosmo/variables"; */
 @import "bootstrap";
 @import "devise_bootstrap_views";
 @import "font-awesome";
@@ -83,14 +83,31 @@ i {
   margin-top: -2px;
 }
 
-.menu {
-  font-weight: normal;
+.btn-info {
+  background-color: #C11925;
+  border-color: #C11925;
 }
-
-.btn-primary {
-  color: #fff;
-  background-color: $logo-color;
-  border-color: $logo-color;
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active {
+  background-color: #aa1621;
+  border-color: #94131c;
+}
+.btn-info.disabled:hover,
+.btn-info.disabled:focus,
+.btn-info.disabled:active,
+.btn-info.disabled.active,
+.btn-info[disabled]:hover,
+.btn-info[disabled]:focus,
+.btn-info[disabled]:active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info:hover,
+fieldset[disabled] .btn-info:focus,
+fieldset[disabled] .btn-info:active,
+fieldset[disabled] .btn-info.active {
+  background-color: #C11925;
+  border-color: #C11925;
 }
 
 
@@ -102,10 +119,15 @@ i {
   }
 }
 
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: #111111;
+  color: #FFFFFF;
+}
 
 .navbar-default {
   background-color: #222222;
-  border-color: #eeeeee;
+
 }
 
 .nav-left {
@@ -385,6 +407,58 @@ span.picture {
   blockquote {
     width: 404px;
     text-align: left;
+  }
+}
+
+/* figthpost show */
+
+.figth-content {
+  margin-top: -8px;
+  .figth-video {
+    background-color: #000000;
+  }
+}
+
+.figth-body {
+  background-color: #E6E6E6;
+  .fight-user {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #DDDDDD;
+    p {
+      font-size: 14px;
+    }
+    .social-action {
+      position:absolute;
+      top: 150px;
+      display: block;
+    }
+  }
+  .figth-comment {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #DDDDDD;
+    textarea {
+      margin-bottom: 20px;
+    }
+    h4 {
+      margin-bottom: 30px;
+    }
+  }
+  .figth-recommend {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #DDDDDD;
+    h4 {
+      margin-top: 0px;
+      margin-bottom: 20px;
+    }
+    .media {
+      margin-bottom: 20px;
+    }
   }
 }
 

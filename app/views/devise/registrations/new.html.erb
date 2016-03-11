@@ -12,7 +12,7 @@
             <%= f.password_field :password, autocomplete: "off" %>
             <%= f.password_field :password_confirmation, autocomplete: "off" %>
 
-            <%= f.submit "Sign up" %>
+            <%= f.submit "Sign up", class: 'btn btn-info' %>
           <% end %>
 
           <%= render "devise/shared/links" %>

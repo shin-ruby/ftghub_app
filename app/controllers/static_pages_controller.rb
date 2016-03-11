@@ -17,4 +17,8 @@ class StaticPagesController < ApplicationController
     render :layout => 'general'
   end
 
+  def feedone
+    render :layout => 'general'
+  end
+
 end
