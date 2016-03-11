@@ -13,7 +13,7 @@ $gray-light: #777777;
 $gray: #666666;
 $gray-darker: #222222;
 $gray-lighter: #EEEEEE;
-$logo-color: #CC0000;
+$logo-color: #C11925;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -85,6 +85,12 @@ i {
 
 .menu {
   font-weight: normal;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $logo-color;
+  border-color: $logo-color;
 }
 
 
@@ -483,9 +489,18 @@ span.picture {
 /* Log in */
 
 .login {
+  h3 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .login-form {
+    padding-right: 40px;
+  }
   .weixin {
-    margin-top: 23px;
-    margin-left: 40px;
+    margin-top: 26px;
+    padding-left: 40px;
+    height: 200px;
+    border-left: 1px solid #e8e8e8;
   }
 }
 
