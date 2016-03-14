@@ -21,4 +21,8 @@ class StaticPagesController < ApplicationController
     render :layout => 'general'
   end
 
+  def feedimg
+    render :layout => 'general'
+  end
+
 end

@@ -419,7 +419,21 @@ span.picture {
   }
 }
 
+.fight-img {
+  margin-top: 20px;
+  height: 460px;
+  background-color: #ffffff;
+  border: 1px solid #DDDDDD;
+  text-align: center;
+  padding: 20px;
+  img {
+    max-height: 420px;
+  }
+}
+
+
 .figth-body {
+  margin-top: -10px;
   background-color: #E6E6E6;
   .fight-user {
     margin-top: 20px;
@@ -461,6 +475,7 @@ span.picture {
     }
   }
 }
+
 
 /* feefpro */
 
