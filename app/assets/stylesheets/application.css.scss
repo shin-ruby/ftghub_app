@@ -127,7 +127,7 @@ fieldset[disabled] .btn-info.active {
 
 .navbar-default {
   background-color: #222222;
-
+  border-color: #94131c;
 }
 
 .nav-left {
@@ -374,6 +374,13 @@ span.picture {
   .m { font-size: 1.2em; }
   .l { font-size: 1.8em; }
 }
+.tags {
+  padding: 20px;
+  text-align: center;
+  a {
+    color: #444444;
+  }
+}
 
 /* homepro */
 
@@ -407,6 +414,23 @@ span.picture {
   blockquote {
     width: 404px;
     text-align: left;
+  }
+}
+
+.home-show {
+  margin-top: -10px;
+  padding: 6px;
+  background-color: #444444;
+  h5 {
+    color: #FFFFFF;
+    text-align: right;
+    margin-right: 40px;
+  }
+  .row {
+    padding: 16px;
+  }
+  a {
+    margin-top: 2px;
   }
 }
 

@@ -1,10 +1,101 @@
 <% provide(:title, "fighting show") %>
 
-<%= render @fightpost %>
+<div class="row figth-content">
+  <div class="col-md-12 figth-video">
+  	<div class="row">
+		  <div class="col-md-6 col-md-offset-3">
+		  	<div class="embed-responsive embed-responsive-16by9">
+				  <iframe src="https://www.youtube.com/embed/1C-6BdvRkbw" frameborder="0" allowfullscreen></iframe>
+				</div>
+		  </div>
+		</div>
+  </div>
+</div>
 
-<h2>Comments</h2>
-<%= render @fightpost.comments %>
+<div class="row figth-body">
+	<div class="container">
+	  <div class="col-md-8">
+	  	<div class="fight-user">
+				<div class="media">
+				  <div class="media-left">
+				    <a href="#">
+				      <%= image_tag "index-1a", size: '80', class: "avatar" %>
+				    </a>
+				    <h5><%= link_to @fightpost.user.name, @fightpost.user %></h5>
+				    <%= button_tag(type: 'submit', class: "btn btn-xs btn-info") do %>
+						  <%= fa_icon "plus", text: "Follow" %>
+						<% end %>
+				  </div>
+				  <div class="media-body">
+						<p><%= link_to @fightpost.content, @fightpost %></p>
 
+						<span class="social-action">
+			        <ul class="list-inline">
+			          <li><%= render partial: 'likers/like_form', locals: { fightpost: @fightpost } -%></li>
+			          <li><%= link_to (fa_icon "comment"), @fightpost %><%= @fightpost.comments.count -%></li>
+			          <li><i class="fa fa-share-square-o"></i></li>
+			        </ul>
+			      </span>
+				  </div>
+				</div>
+	  	</div>
 
-<h2>Add a comment:</h2>
-<%= render "comments/form" %>
+			<%= render "comments/form" %>
+
+			<div class="figth-comment">
+				<h4>21 Comment</h4>
+				<%= render @fightpost.comments %>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="figth-recommend">
+				<h4>推荐</h4>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="media">
+						  <div class="media-left">
+						    <%= link_to image_tag "feed", height: '60' %>
+						  </div>
+						  <div class="media-body">
+						  	<small>Henriette Flader, 2nd Dan, Hélène Doué,</small>
+						    <h6 class="media-heading">Media heading</h6>
+						  </div>
+						</div>
+
+						<div class="media">
+						  <div class="media-left">
+						    <%= link_to image_tag "feed", height: '60' %>
+						  </div>
+						  <div class="media-body">
+						  	<small>Henriette Flader, 2nd Dan, Hélène Doué,</small>
+						    <h6 class="media-heading">Media heading</h6>
+						  </div>
+						</div>
+
+						<div class="media">
+						  <div class="media-left">
+						    <%= link_to image_tag "feed", height: '60' %>
+						  </div>
+						  <div class="media-body">
+						  	<small>Henriette Flader, 2nd Dan, Hélène Doué,</small>
+						    <h6 class="media-heading">Media heading</h6>
+						  </div>
+						</div>
+
+						<div class="media">
+						  <div class="media-left">
+						    <%= link_to image_tag "feed", height: '60' %>
+						  </div>
+						  <div class="media-body">
+						  	<small>Henriette Flader, 2nd Dan, Hélène Doué,</small>
+						    <h6 class="media-heading">Media heading</h6>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

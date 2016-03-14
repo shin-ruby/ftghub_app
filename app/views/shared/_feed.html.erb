@@ -1,4 +1,13 @@
-<!-- <ol class="fightposts"> -->
-  <%= render @feed_items %>
-<!-- </ol> -->
-<%= will_paginate @feed_items -%>
+<div class="row home-feed">
+  <div class="col-md-9 col-md-offset-2">
+  	<%= render @feed_items %>
+	</div>
+	<div class="row">
+	  <div class="col-md-9 col-md-offset-2">
+				<%= will_paginate @feed_items -%>
+		</div>
+	</div>
+</div>
+
+
+

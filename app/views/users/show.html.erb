@@ -1,39 +1,124 @@
 <%= provide(:title, @user.name) %>
 
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= image_tag("user.jpg", size: "80", alt: @user.name, class: "gravatar") %>
-        <%= @user.name %>
-      </h1>
-    </section>
-    <section class="stats">
-      <%= render 'shared/stats' %>
-    </section>
-    <section class="stats">
-      <%= render 'follow_form' if user_signed_in? %>
-    </section>
-    <section class="stats">
+<div class="row user-info">
+  <div class="col-md-6">
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+         <%= image_tag("user.jpg", size: "80", alt: @user.name, class: "avatar" ) %>
+        </a>
+      </div>
+      <div class="media-body">
+        <h4><%= @user.name %></h4>
+          <%= render 'follow_form' if user_signed_in? %>
+          <% if user_signed_in? && @user == current_user -%>
+            <p><%= link_to "Edit Profile", profile_path -%></p>
+          <% end -%>
+        <div class="stats">
+          <%= render 'shared/stats' %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <p>
       <% if @profile.nil? %>
         暂时无资料!
       <% else %>
         <%= @profile.introduction %>
       <% end %>
+    </p>
+  </div>
+</div>
 
-      <% if user_signed_in? && @user == current_user -%>
-          <p><%= link_to "Edit Profile", profile_path %></p>
-      <% end -%>
+<div class="row home-feed">
+  <div class="col-md-9 col-md-offset-2">
+
+<!--- feed line -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="date-time">
+          <h5>2016年3月10日</h5>
+        </div>
+
+        <% if @user.fightposts.any? %>
+          <h3>Fightposts (<%= @user.fightposts.count %>)</h3>
+            <%= render @fightposts %>
+        <% end %>
+
+      </div>
+    </div>
+<!-- line end -->
+
+<%= will_paginate @fightposts %>
+
+<!--- feed line -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="date-time">
+          <h5>2016年3月10日</h5>
+        </div>
+
+
+      </div>
+    </div>
+<!-- line end -->
+
+
+
+<!--- feed line -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="date-time">
+          <h5>2016年3月10日</h5>
+        </div>
+
+
+
+      </div>
+    </div>
+<!-- line end -->
+
+
+  </div>
+</div>
+
+
+
+<!-- <div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%#= image_tag("user.jpg", size: "80", alt: @user.name, class: "avatar" ) %>
+        <%#= @user.name %>
+      </h1>
+    </section>
+    <section class="stats">
+      <%#= render 'shared/stats' %>
+    </section>
+    <section class="stats">
+      <%#= render 'follow_form' if user_signed_in? %>
+    </section>
+    <section class="stats">
+      <%# if @profile.nil? %>
+        暂时无资料!
+      <%# else %>
+        <%#= @profile.introduction %>
+      <%# end %>
+
+      <%# if user_signed_in? && @user == current_user -%>
+          <p><%#= link_to "Edit Profile", profile_path %></p>
+      <%# end -%>
     </section>
   </aside>
 
   <div class="col-md-8">
-    <% if @user.fightposts.any? %>
-      <h3>Fightposts (<%= @user.fightposts.count %>)</h3>
+    <%# if @user.fightposts.any? %>
+      <h3>Fightposts (<%#= @user.fightposts.count %>)</h3>
       <ol class="fightposts">
-        <%= render @fightposts %>
+        <%#= render @fightposts %>
       </ol>
-      <%= will_paginate @fightposts %>
-    <% end %>
+      <%#= will_paginate @fightposts %>
+    <%# end %>
   </div>
-</div>
+</div> -->

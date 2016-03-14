@@ -1,8 +1,27 @@
-<% if user_signed_in? %>
-	<%= form_for [@fightpost, @fightpost.comments.build], layout: :inline do |f| %>
-	  <%= f.text_field :content, size: 50 -%>
-	  <%= f.submit %>
-	<% end %>
-<% else %>
-	<p>登录后评论</p>
-<% end %>
+<%# if user_signed_in? %>
+	<%#= form_for [@fightpost, @fightpost.comments.build], layout: :inline do |f| %>
+	  <%#= f.text_field :content, size: 50 -%>
+	  <%#= f.submit %>
+	<%# end %>
+<%# else %>
+	<!-- <p>登录后评论</p> -->
+<%# end %>
+
+<div class="figth-comment">
+	<div class="row">
+		<div class="col-md-1">
+			<%= link_to image_tag "logo-2.png", size: "32", class: "img-circle avatar" %>
+		</div>
+	  <div class="col-md-11">
+	  	<% if user_signed_in? %>
+				<%= form_for [@fightpost, @fightpost.comments.build] do |f| %>
+				  <%= f.text_area :content, rows: 4, class: "form-control" %>
+
+				  <%= f.submit class: "btn btn-info" %>
+				<% end %>
+			<% else %>
+				<p>登录后评论</p>
+			<% end %>
+	  </div>
+	</div>
+</div>

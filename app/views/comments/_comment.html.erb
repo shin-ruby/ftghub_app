@@ -1,9 +1,31 @@
-<p>
+<!-- <p>
   <strong>Comment:</strong>
-  <%= comment.content %>
-  <% if current_user.admin? || comment.user == current_user -%>
-  	| <%= link_to 'Destroy Comment', [comment.fightpost, comment],
+  <%#= comment.content %>
+  <%# if current_user.admin? || comment.user == current_user -%>
+  	| <%#= link_to 'Destroy Comment', [comment.fightpost, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
-  <% end -%>
+  <%# end -%>
 </p>
+ -->
+
+
+<div class="row">
+	<div class="col-md-1">
+		<%= link_to image_tag "logo-2.png", size: "32", class: "img-circle avatar" %>
+	</div>
+  <div class="col-md-11">
+  	<h5>Michael Pykh</h5>
+  	<p>
+  		<%= comment.content %>
+  		<% if current_user.admin? || comment.user == current_user -%>
+		  	| <%= link_to 'Destroy Comment', [comment.fightpost, comment],
+		               method: :delete,
+		               data: { confirm: 'Are you sure?' } %>
+		  <% end -%>
+  	</p>
+  	<small>2016年3月7日</small>
+  </div>
+</div>
+<hr>		
+
