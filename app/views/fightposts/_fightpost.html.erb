@@ -34,11 +34,8 @@
     <%= image_tag "atelier-rails-interactifs", class: "thumbnail-img" %>
     <div class="content">
       <p><%= link_to fightpost.content, fightpost %></p>
-
       <span><small>Posted <%= time_ago_in_words(fightpost.created_at) %>  ago.</small></span>
-      <span class="tag">
-        Tags: <%= raw fightpost.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %>
-      </span>
+      <span class="tag"><small>Tags: <%= raw fightpost.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></small></span>
     </div>
     <div class="caption">
       <span class="social-action">

@@ -34,6 +34,13 @@ body {
   padding-top: 60px;
 }
 
+.row {
+  width: auto;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 section {
   overflow: auto;
 }
@@ -387,6 +394,7 @@ span.picture {
   text-align: center;
   a {
     color: #444444;
+    padding-right: 20px;
   }
 }
 
@@ -432,13 +440,9 @@ span.picture {
   h5 {
     color: #FFFFFF;
     text-align: right;
-    margin-right: 40px;
   }
   .row {
     padding: 16px;
-  }
-  a {
-    margin-top: 2px;
   }
 }
 
@@ -553,7 +557,8 @@ span.picture {
 
 
 .home-feed {
-  background-color: #E6E6E6;
+  background-color: #EEEEEE;
+  padding-top: 40px;
   .date-time {
     margin-left: 8px;
     margin-top: 20px;
@@ -562,6 +567,9 @@ span.picture {
   .col-md-3 {
     padding-left: 5px;
     padding-right: 5px;
+  }
+  .will-paginate {
+    text-align: center;
   }
 }
 
@@ -579,16 +587,18 @@ span.picture {
     position: relative;
     height: 172px;
     margin-top: -172px;
+    padding: 4px;
     opacity: 0;
     &:hover {
       opacity: 1;
     }
-    padding: 4px;
-
     span {
       position:absolute;
       top: 150px;
       display: block;
+    }
+    .tag {
+      margin-left: 180px;
     }
   }
 
