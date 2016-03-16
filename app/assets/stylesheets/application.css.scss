@@ -8,6 +8,7 @@
 
 /* mixins, variables, etc. */
 
+$white: #FFFFFF;
 $gray-medium-light: #eaeaea;
 $gray-light: #777777;
 $gray: #666666;
@@ -121,30 +122,37 @@ fieldset[disabled] .btn-info.active {
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, 
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #111111;
+  background-color: #222222;
   color: #FFFFFF;
 }
 
 .navbar-default {
   background-color: #222222;
   border-color: #94131c;
+  .navbar-nav > li > a {
+    color: #DDDDDD;
+    font-weight:bold;
+    &:hover {
+      color: $white;
+    }
+  }
 }
 
 .nav-left {
   margin-left: 160px;
 }
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.6em;
-  color: $gray-light;
-  letter-spacing: -1px;
-  padding-top: 5px;
-  font-weight: bold;
+.dropdown-menu {
+  background-color: #222222;
+  .divider {
+    background-color: #444444;
+  }
+}
+
+.dropdown-menu > li > a {
+  color: #DDDDDD;
   &:hover {
-    color: $gray-light;
-    text-decoration: none;
+    background-color: $gray-light;
   }
 }
 
