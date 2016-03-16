@@ -91,6 +91,17 @@ i {
   margin-top: -2px;
 }
 
+.btn-link {
+  color: #888888;
+  &:hover {
+    color: #666666;
+    text-decoration: none;
+  }
+}
+
+a:link { text-decoration: none; }
+a:hover { text-decoration: none; } 
+
 .btn-info {
   background-color: #C11925;
   border-color: #C11925;
@@ -513,7 +524,7 @@ span.picture {
 }
 
 
-/* feefpro */
+/* user show */
 
 .user-info {
   margin-top: -10px;
@@ -522,12 +533,15 @@ span.picture {
     margin-top: 28px;
     margin-bottom: 36px;
     margin-left: 286px;
+    .media-body {
+      padding-left: 6px;
+    }
     h4 {
       position: absolute;
       margin-top: 14px;
     }
     a {
-      margin-top: 20px;
+      margin-top: 30px;
       font-size: 12px;
       &:hover {
         color: #C01925;
@@ -537,21 +551,29 @@ span.picture {
       display: block;
     }
     .btn {
-      margin-left: 110px;
-      margin-top: 16px;
+      // margin-left: 180px;
+      margin-top: 6px;
     }
     .btn-info {
-        background-color: #C11925;
-        border-color: #C11925;
+      background-color: #C11925;
+      border-color: #C11925;
+    }
+    .stats {
+      margin-top: 23px;
     }
   }
   .avatar {
     margin-top: 16px;
   }
   p {
+    //margin-top: 40px;
+    //margin-right: 120px;
+    font-size: 14px;
+  }
+  .introduction {
+    display: block;
     margin-top: 40px;
     margin-right: 120px;
-    font-size: 14px;
   }
 }
 
@@ -601,21 +623,21 @@ span.picture {
       margin-left: 180px;
     }
   }
+  .caption {
+    color: #888888;
+  }
 
   hr {
     margin-bottom: 6px;
     margin-top: 12px;
   }
   a {
-    color: #C11925;
+    color: #888888;
     &:hover {
-      color: #C11925
+      color: #666666;
     }
   }
 }
-
-
-
 
 /* Log in */
 

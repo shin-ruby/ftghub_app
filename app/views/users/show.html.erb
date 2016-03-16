@@ -4,16 +4,14 @@
   <div class="col-md-6">
     <div class="media">
       <div class="media-left">
-        <a href="#">
-         <%= image_tag("user.jpg", size: "80", alt: @user.name, class: "avatar" ) %>
-        </a>
+        <%= image_tag("user.jpg", size: "90", alt: @user.name, class: "avatar" ) %>
+        <%= render 'follow_form' if user_signed_in? %>
+        <% if user_signed_in? && @user == current_user -%>
+          <p><%= link_to "Edit Profile", profile_path -%></p>
+        <% end -%>
       </div>
       <div class="media-body">
         <h4><%= @user.name %></h4>
-          <%= render 'follow_form' if user_signed_in? %>
-          <% if user_signed_in? && @user == current_user -%>
-            <p><%= link_to "Edit Profile", profile_path -%></p>
-          <% end -%>
         <div class="stats">
           <%= render 'shared/stats' %>
         </div>
@@ -21,13 +19,13 @@
     </div>
   </div>
   <div class="col-md-6">
-    <p>
+    <span class="introduction">
       <% if @profile.nil? %>
         暂时无资料!
       <% else %>
         <%= @profile.introduction %>
       <% end %>
-    </p>
+    </span>
   </div>
 </div>
 
