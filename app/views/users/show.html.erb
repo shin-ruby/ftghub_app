@@ -1,7 +1,7 @@
 <%= provide(:title, @user.name) %>
 
 <div class="row user-info">
-  <div class="col-md-6">
+  <div class="col-md-5">
     <div class="media">
       <div class="media-left">
         <%= image_tag("user.jpg", size: "90", alt: @user.name, class: "avatar" ) %>
@@ -18,10 +18,10 @@
       </div>
     </div>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-7">
     <span class="introduction">
       <% if @profile.nil? %>
-        暂时无资料!
+        暂无个人介绍!
       <% else %>
         <%= @profile.introduction %>
       <% end %>
@@ -30,7 +30,7 @@
 </div>
 
 <div class="row home-feed">
-  <div class="col-md-9 col-md-offset-2">
+  <div class="container">
 
 <!--- feed line -->
     <div class="row">
