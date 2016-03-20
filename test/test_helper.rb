@@ -9,7 +9,11 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 
-# devise Test 需要引入一下代码
 class ActionController::TestCase
   include Devise::TestHelpers
+end
+
+CarrierWave.configure do |config|
+  config.storage = :file
+  config.enable_processing = false
 end
