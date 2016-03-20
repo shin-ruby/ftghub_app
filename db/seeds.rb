@@ -14,7 +14,7 @@ User.create!(name:  'Shin Zhang',
 
 99.times do |n|
   name  = Faker::Name.name
-  email = "example-#{n+1}@railstutorial.org"
+  email = "example-#{n + 1}@railstutorial.org"
   User.create!(name:  name,
                email: email,
                password:              'password',
@@ -24,9 +24,9 @@ end
 users = User.order(:created_at).take(6)
 50.times do
   content = Faker::Lorem.sentence(5)
-  tag = ['Aikido', 'Karate', 'Taekwondo', 'Thai boxing', 'Boxing', 'Tai Chi', 'Sanda', 'Kendo', 
-          'Wing Chun', 'Judo', '八极拳'].sample
-  users.each { |user| user.fightposts.create!(content: content, tag_list: tag) }
+  tag_list = ['Aikido', 'Karate', 'Taekwondo', 'Thai boxing', 'Boxing', 'Tai Chi', 'Sanda', 'Kendo',
+              'Wing Chun', 'Judo', '八极拳']
+  users.each { |user| user.fightposts.create!(content: content, tag_list: tag_list.sample) }
 end
 
 # Following relationships

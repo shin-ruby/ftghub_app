@@ -3,7 +3,7 @@ require 'test_helper'
 class FightpostTest < ActiveSupport::TestCase
   def setup
     @user = users(:michael)
-    @fightpost = @user.fightposts.build(content: 'aikido')
+    @fightpost = @user.fightposts.build(content: 'aikido', tag_list: 'Aikido')
   end
 
   test 'should be valid' do
@@ -23,6 +23,11 @@ class FightpostTest < ActiveSupport::TestCase
   test 'content should be at most 260 characters' do
     @fightpost.content = 'a' * 261
     assert_not @fightpost.valid?
+  end
+
+  test 'valid fightpost can save' do
+    @fightpost.save!
+    assert_not @fightpost.new_record?
   end
 
   test 'order should be most recent first' do
