@@ -13,4 +13,12 @@ class FightpostsControllerTest < ActionController::TestCase
     end
     assert_redirected_to root_url
   end
+
+  test 'create firstpost with picture upload' do
+    sign_in(users(:michael))
+    assert_difference('Fightpost.count') do
+      post :create, params: { fightpost: { content: 'Test',
+                                           picture: fixture_file_upload('files/user.jpg', 'image/jpg') } }
+    end
+  end
 end
