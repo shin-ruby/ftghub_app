@@ -29,35 +29,22 @@
     </span>
   </li>
 </ul> -->
-<div class="col-md-3">
-  <div class="thumbnail">
-    <%= image_tag "atelier-rails-interactifs", class: "thumbnail-img" %>
-    <div class="content">
-      <p><%= link_to fightpost.content, fightpost %></p>
-      <span><small>Posted <%= time_ago_in_words(fightpost.created_at) %>  ago.</small></span>
-      <span class="tag"><small>Tags: <%= raw fightpost.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></small></span>
-    </div>
-    <div class="caption">
-      <span class="social-action">
-        <ul class="list-inline">
+<div class="col-md-4 home-content">
+    <div class="row">
+      <div class="col-xs-2 home-avatar">
+        <%= image_tag "logo-2.png", size: "36", class: "img-circle" %>
+      </div>
+      <div class="col-xs-10">
+        <p><small><%= link_to fightpost.user.name, fightpost.user %></small></p>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="https://www.youtube.com/embed/1C-6BdvRkbw" frameborder="0" allowfullscreen></iframe>
+        </div>  
+        <p><small><%= link_to fightpost.content, fightpost %></small><small>Tags: <%= raw fightpost.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></small></p>
+        <ul class="list-inline home-social">
           <li><%= render partial: 'likers/like_form', locals: { fightpost: fightpost } -%></li>
           <li><%= link_to (fa_icon "comment"), fightpost %><%= fightpost.comments.count -%></li>
           <li><%= link_to (fa_icon "share-square-o"), "#" %></li>
         </ul>
-      </span>
-      <hr>
-      <div class="media">
-        <div class="media-left media-middle">
-          <ul class="list-inline">
-            <li>
-              <%= image_tag "logo-2.png", size: "18", class: "img-circle" %>
-            </li>
-            <li>
-              <h6 class="media-heading"><%= link_to fightpost.user.name, fightpost.user %></h6>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
-</div>

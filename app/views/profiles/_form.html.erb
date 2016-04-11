@@ -1,12 +1,24 @@
-<%= form_for @profile, url: profile_path, layout: :horizontal, html: { multipart: true } do |f| %>
-	<%= f.file_field :avatar, accept: 'image/jpeg, image/gif, image/png' %>
-	<%= f.text_field :fullname %>
-<div class="form-group">
-  <label class="col-sm-3 control-label">Gender</label>
-  <div class="col-sm-9">
-    <%= f.collection_radio_buttons(:sex, [['Male', 'M'],['Female', 'F']], :second, :first) { |b| content_tag(:div, 'class' => 'radio') { b.label { b.radio_button(checked: @profile.sex == b.value) + "#{b.text}".html_safe } } } %>
+<%= form_for @profile, url: profile_path, layout: :basic, html: { multipart: true } do |f| %>
+  <div class="col-md-12 profile-avatar text-center">
+    <div class="fileinput fileinput-new" data-provides="fileinput">
+      <div class="fileinput-new thumbnail" style="width: 100px; height: 100px;">
+        <%= image_tag("shin-avatar", size: "100") %>
+      </div>
+      <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 100px; max-height: 100px;"></div>
+      <div>
+        <span class="btn btn-default btn-sm btn-file"><span class="fileinput-new">update</span><span class="fileinput-exists">change</span><input type="file" name="..."></span>
+        <a href="#" class="btn btn-default btn-sm fileinput-exists" data-dismiss="fileinput">remove</a>
+      </div>
+    </div>
   </div>
-</div>
+  <%= f.file_field :avatar, accept: 'image/jpeg, image/gif, image/png' %>
+	<%= f.text_field :fullname %>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">Gender</label>
+    <div class="col-sm-9">
+      <%= f.collection_radio_buttons(:sex, [['Male', 'M'],['Female', 'F']], :second, :first) { |b| content_tag(:div, 'class' => 'radio') { b.label { b.radio_button(checked: @profile.sex == b.value) + "#{b.text}".html_safe } } } %>
+    </div>
+  </div>
   <%= f.date_field :birthday %>
   <%= f.telephone_field :tel, suffix: '☏' %>
   <%= f.text_area :introduction, required: true, placeholder: "Write something..." %>

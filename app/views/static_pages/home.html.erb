@@ -1,34 +1,32 @@
-<% if user_signed_in? %>
-	<div class="row">
-	  <div class="col-md-12 home-show">
-	  	<div class="row">
-			  <div class="col-md-7">
-			  	<h5>你是格斗爱好者吗？ FightTechnologyGroup秀出你的格斗技术</h5>
+<div class="row common-header">
+  <div class="col-md-12">
+  	<ul class="list-inline">
+		  <li>
+		  	<div class="sort-box active">
+			  	推荐
 			  </div>
-			  <div class="col-md-5">
-			  	<%= link_to (fa_icon "download", text: "下载App"), new_fightpost_path, class: "btn btn-sm btn-info" %>
+		  </li>
+		  <li>
+		  	<div class="sort-box">
+			  	关注
 			  </div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row">
-	  <div class="col-md-12 tags">
-	  	<!-- 待定 -->
-		  <%# tag_cloud Fightpost.tag_counts, %w[s m l] do |tag, css_class| %>
-				<%#= link_to tag.name, tag_path(tag.name), class: css_class %>
-			<%# end %>
-			<%= link_to '太极拳', "#" %>
-			<%= link_to '跆拳道', "#" %>
-			<%= link_to '拳击', "#" %>
-			<%= link_to '空手道', "#" %>
-			<%= link_to '更多...', "#" %>
-		</div>
-	</div>
-
+		  </li>
+		</ul>
+  </div>
+</div>
+<div class="row home">
 	<%= render 'shared/feed' %>
+</div>
 
-<% else %>
-	<%= render 'welcome' %>
-<% end %>
+
+<%#= link_to (fa_icon "download", text: "下载App"), new_fightpost_path, class: "btn btn-sm btn-info" %>
+<%# tag_cloud Fightpost.tag_counts, %w[s m l] do |tag, css_class| %>
+	<%#= link_to tag.name, tag_path(tag.name), class: css_class %>
+<%# end %>
+
+
+
+
+
+
 

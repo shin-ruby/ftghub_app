@@ -1,58 +1,44 @@
-<header class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <%= link_to (image_tag "ftglogo6", height: "50", id: "logo-icon"), root_path %>
-    <nav class="menu">
-      <ul class="nav navbar-nav nav-left">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">资讯</a>
+<div class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm">
+  <a class="navmenu-brand visible-md visible-lg" href="#">FTGHUB</a>
+  <% if user_signed_in? %>
+    <% if !current_user.profile.avatar.nil? %>
+      <%= image_tag("shin-avatar", size: "36", class: "img-circle ftglogo") %>
+      <h5 class="ftglogo"><%= current_user.name %></h5>
+    <% else %>
+      <li><%= link_to image_tag "logo-2.png", size: "36", class: "img-circle ftglogo" %></li>
+      <h5 class="ftglogo"><%= current_user.name %></h5>
+    <% end %>
+    <hr>
+    <ul class="nav navmenu-nav">
+      <li><%= link_to (fa_icon "youtube-play", text: "推荐"), root_path %></li>
+      <li><%= link_to (fa_icon "search", text: "发现"), '#' %></li>
+      <li><a href="../navmenu-reveal/"><i class="fa fa-star"></i>发布</a></li>
+      <li><%= link_to (fa_icon "envelope", text: "消息"), '#' %></li>
+      <li><%= link_to (fa_icon "user", text: "个人信息"), '#' %></li>
+      <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+            <%= current_user.name %><b class="caret"></b>
+          </a>
           <ul class="dropdown-menu">
-            <li><a href="#">最新</a></li>
-            <li><a href="#">广播</a></li>
-            <li><a href="#">深度</a></li>
-            <li><a href="#">转载</a></li>
+            <li><%= link_to t('menu.users'), users_path %></li>
+            <li><%= link_to t('menu.notice'), "#" %></li>
+            <li><%= link_to t('menu.show'), user_path(current_user) %></li>
+            <li><%= link_to t('menu.edit_password'), edit_user_registration_path %></li>
+            <li><%= link_to t('menu.logout'), destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to t('menu.sign_up'), new_user_registration_path %></li>
+            <li><%= link_to t('menu.login'), new_user_session_path %></li>
           </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">原创</a>
-          <ul class="dropdown-menu">
-            <li><a href="#">最热</a></li>
-            <li><a href="#">视频</a></li>
-            <li><a href="#">图片</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">关注</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">分类</a></li>
-          </ul>
-        </li>
-        <li><%= link_to '场馆', "#" %></li>
-        <li><%= link_to '手机应用', "#" %></li>
-        <li><%= link_to '商店', "#" %></li>
-      </ul>
+      </li>
+    </ul>
+  <% end %>
+  <hr>
+  <%= image_tag("ftglogo", width: '98', class: "ftglogo" ) %>
+</div>
 
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-          <% if current_user.profile.avatar.nil? %>
-            <li><%= link_to image_tag "logo-2.png", size: "22", class: "img-circle avatar" %></li>
-          <% else %>
-            <li><%= link_to image_tag current_user.profile.avatar.url, size: "22", class: "img-circle avatar" %></li>
-          <% end %>
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
-              <%= current_user.name %><b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to t('menu.users'), users_path %></li>
-              <li><%= link_to t('menu.notice'), "#" %></li>
-              <li><%= link_to t('menu.show'), user_path(current_user) %></li>
-              <li><%= link_to t('menu.edit_password'), edit_user_registration_path %></li>
-              <li><%= link_to t('menu.logout'), destroy_user_session_path, method: :delete %></li>
-          <% else %>
-              <li><%= link_to t('menu.sign_up'), new_user_registration_path %></li>
-              <li><%= link_to t('menu.login'), new_user_session_path %></li>
-            </ul>
-          <% end %>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<div class="navbar navbar-default navbar-fixed-top hidden-md hidden-lg">
+  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".navmenu">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+</div>

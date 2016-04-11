@@ -1,86 +1,72 @@
 <%= provide(:title, @user.name) %>
 
-<div class="row user-info">
-  <div class="col-md-5">
-    <div class="media">
-      <div class="media-left">
-        <%= image_tag("user.jpg", size: "90", alt: @user.name, class: "avatar" ) %>
-        <%= render 'follow_form' if user_signed_in? %>
-        <% if user_signed_in? && @user == current_user -%>
-          <p><%= link_to "Edit Profile", profile_path -%></p>
-        <% end -%>
-      </div>
-      <div class="media-body">
-        <h4><%= @user.name %></h4>
-        <div class="stats">
-          <%= render 'shared/stats' %>
-        </div>
-      </div>
+<div class="user-show">
+  <div class="row user-show-head">
+    <div class="col-xs-4 left">
+      <p><i class="fa fa-user-plus"></i></p>
+    </div>
+    <div class="col-xs-4 center">
+      <h5 class="text-center"><%= @user.name %></h5>
+    </div>
+    <div class="col-xs-4 right">
+      <p class="text-right"><i class="fa fa-cog"></i></p>
     </div>
   </div>
-  <div class="col-md-7">
-    <span class="introduction">
-      <% if @profile.nil? %>
-        暂无个人介绍!
-      <% else %>
-        <%= @profile.introduction %>
-      <% end %>
-    </span>
+  <div class="row user-show-avatar">
+    <div class="col-md-12 text-center">
+      <%= image_tag("user.jpg", size: "80", alt: @user.name, class: "img-circle avatar" ) %>
+      <p><small>@shinplus</small></p>
+      <p>
+        <small>
+          <% if @profile.nil? %>
+            暂无个人介绍!
+          <% else %>
+            <%= @profile.introduction %>
+          <% end %>
+        </small>
+      </p>
+    </div>
   </div>
-</div>
-
-<div class="row home-feed">
-  <div class="container">
-
-<!--- feed line -->
-    <div class="row">
-      <div class="col-md-12">
-        <div class="date-time">
-          <h5>2016年3月10日</h5>
-        </div>
-
-        <% if @user.fightposts.any? %>
-          <h3>Fightposts (<%= @user.fightposts.count %>)</h3>
-            <%= render @fightposts %>
-        <% end %>
-
+  <div class="row user-show-content">
+    <div class="col-md-12 text-center">
+      <div class="stats">
+        <%= render 'shared/stats' %>
       </div>
+      <% if user_signed_in? && @user == current_user -%>
+        <p><%= link_to "edit profile", profile_path, class: 'btn btn-default', role: 'button' -%></p>
+      <% end -%>
     </div>
-<!-- line end -->
-
-<%= will_paginate @fightposts %>
-
-<!--- feed line -->
-    <div class="row">
-      <div class="col-md-12">
-        <div class="date-time">
-          <h5>2016年3月10日</h5>
-        </div>
-
-
-      </div>
+  </div>
+  <div class="row user-show-video">
+    <div class="col-xs-4">
+      <%= image_tag("index2-1") %>
     </div>
-<!-- line end -->
-
-
-
-<!--- feed line -->
-    <div class="row">
-      <div class="col-md-12">
-        <div class="date-time">
-          <h5>2016年3月10日</h5>
-        </div>
-
-
-
-      </div>
+    <div class="col-xs-4">
+      <%= image_tag("index2-1") %>
     </div>
-<!-- line end -->
-
-
+    <div class="col-xs-4">
+      <%= image_tag("index2-1") %>
+    </div>
+    <div class="col-xs-4">
+      <%= image_tag("index2-1") %>
+    </div>
+    <div class="col-xs-4">
+      <%= image_tag("index2-1") %>
+    </div>
+    <div class="col-xs-4">
+      <%= image_tag("index2-1") %>
+    </div>
   </div>
 </div>
 
+
+
+
+
+<%# if @user.fightposts.any? %>
+  <%#= @user.fightposts.count %>
+  <%#= render @fightposts %>
+<%# end %>
 
 
 <!-- <div class="row">

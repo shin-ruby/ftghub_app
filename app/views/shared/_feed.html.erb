@@ -1,11 +1,8 @@
-<div class="row home-feed">
-  <div class="container">
-  	<%= render @feed_items %>
-	</div>
-	<div class="row">
-	  <div class="col-md-6 col-md-offset-3 will-paginate">
-			<%= will_paginate @feed_items -%>
-		</div>
+<%= render @feed_items %>
+
+<div class="row">
+  <div class="col-xs-12">
+		<%= will_paginate @feed_items -%>
 	</div>
 </div>
 

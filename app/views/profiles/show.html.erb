@@ -1,5 +1,16 @@
 <% provide(:title, "Edit Provide") %>
 
-<h2>Edit Provide</h2>
+<div class="row common-header">
+  <div class="col-md-12">
+  	<a href="#">
+      <%= link_to (fa_icon "angle-left"), '#', class: "fa-2x" %>
+  	</a>
+  	<p class="text-center">edit profile</p>
+  </div>
+</div>
 
-<%= render 'form' %>
+<div class="row profile-form">
+  <div class="col-md-12">
+		<%= render 'form' %>
+	</div>
+</div>

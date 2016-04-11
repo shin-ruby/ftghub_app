@@ -1,15 +1,27 @@
 <% @user ||= current_user %>
-<div class="stats">
-	<a href="<%= following_user_path(@user) %>">
-		<strong id="following" class="stat">
-			<%= @user.following.count %>
-		</strong>
-		following
-	</a>
-	<a href="<%= followers_user_path(@user) %>">
-    <strong id="followers" class="stat">
-      <%= @user.followers.count %>
-    </strong>
-    followers
-  </a>
-</div>
+<ul class="list-inline stats">
+	<li>
+		<a href="<%= following_user_path(@user) %>">
+			<strong id="following" class="stat">
+				<%= @user.following.count %>
+			</strong>
+			<small>following</small>
+		</a>
+	</li>
+	<li>
+		<a href="<%= followers_user_path(@user) %>">
+	    <strong id="followers" class="stat">
+	      <%= @user.followers.count %>
+	    </strong>
+	    <small>fans</small>
+	  </a>
+	</li>
+	<li>
+  	<a href="#">
+	    <strong id="likes" class="stat">
+	      53
+	    </strong>
+	    <small>likes</small>
+	  </a>
+  </li>
+</ul>

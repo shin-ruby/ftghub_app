@@ -3,22 +3,12 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.0.beta3'
 gem 'sqlite3'
 
-# Use Puma as the app server
 gem 'puma'
-# Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5.x'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
 gem 'bootstrap-sass'
@@ -33,7 +23,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'faker', '~> 1.6.1'
 gem 'carrierwave',             '~> 0.10.0'
 gem 'mini_magick',             '~> 4.4.0'
-gem 'acts-as-taggable-on', git: 'https://github.com/mbleigh/acts-as-taggable-on'
+gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on'
 
 gem 'devise', '~> 4.0.0.rc2'
 gem 'devise-bootstrap-views'
