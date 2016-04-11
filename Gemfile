@@ -5,7 +5,7 @@ gem 'sqlite3'
 
 gem 'puma'
 gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', require: false
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5.x'
@@ -21,9 +21,10 @@ gem 'gravatarify'
 gem 'will_paginate-bootstrap'
 gem 'will_paginate', '~> 3.1.0'
 gem 'faker', '~> 1.6.1'
-gem 'carrierwave',             '~> 0.10.0'
-gem 'mini_magick',             '~> 4.4.0'
-gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on'
+
+gem 'carrierwave',             '~> 0.11.0'
+gem 'mini_magick',             '~> 4.4'
+gem 'acts-as-taggable-on', git: 'https://github.com/Eric-Guo/acts-as-taggable-on'
 
 gem 'devise', '~> 4.0.0.rc2'
 gem 'devise-bootstrap-views'
