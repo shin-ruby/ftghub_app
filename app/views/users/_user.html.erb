@@ -1,14 +1,15 @@
-<li>
-  <div class="media show-follow">
-	  <div class="media-left">
-	    <%= gravatar_tag user, :default %>
-	  </div>
-	  <div class="media-body">
-	    <%= link_to user.name, user %>
-	  	<% if current_user.admin? && !current_user?(user) %>
+<tr>
+	<td><%= image_tag("shin-avatar", size: "40", class: "img-circle avatar") %></td>
+	<td>
+		<p class="username"><%= link_to user.name, user %>
+			<% if current_user.admin? && !current_user?(user) %>
 	    | <%= link_to "delete", user, method: :delete,
 	                                  data: { confirm: "You sure?" } %>
 	    <% end %>
-	  </div>
-	</div>
-</li>
+		</p>
+		<small>合气道，太极拳</small>
+	</td>
+	<td>
+		<button class="btn btn-danger btn-sm" type="submit"><i class="fa fa fa-user-times"></i></button>
+	</td>
+</tr>

@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  layout 'general'
+
   def home
     if user_signed_in?
       if params[:tag]

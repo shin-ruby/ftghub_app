@@ -4,7 +4,6 @@ class FightpostsController < ApplicationController
 
   def show
     @fightpost = Fightpost.find(params[:id])
-    render :layout => 'general'
   end
 
   def new

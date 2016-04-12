@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="col-xs-12">
-		<%= will_paginate @feed_items unless @feed_items.blank? -%>
+		<%= will_paginate(@feed_items, :page_links => false, class: 'pagination-sm') unless @feed_items.blank? -%>
 	</div>
 </div>
 

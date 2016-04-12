@@ -10,7 +10,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @fightposts = @user.fightposts.paginate(page: params[:page])
     @profile = @user.profile
-    render :layout => 'general'
   end
 
   def destroy
