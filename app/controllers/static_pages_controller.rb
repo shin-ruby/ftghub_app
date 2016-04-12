@@ -10,6 +10,10 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def discover
+    
+  end
+
   def about
   end
 

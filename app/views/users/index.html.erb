@@ -1,8 +1,22 @@
 <% provide(:title, 'All users') %>
-<h1>All users</h1>
 
-<ul class="users">
-   <%= render @users %>
-</ul>
+<div class="row common-header">
+  <div class="col-xs-1">
+     <%= link_to (fa_icon "angle-left"), discover_path, class: "fa-2x" %>
+  </div>
+  <div class="col-xs-10">
+    <p>所有用户</p>
+  </div>
+</div>
 
-<%= will_paginate @users %>
+<table class="table common-list">
+  <%# if @users.admin? %>
+    <%= render @users %>
+  <%# end %>
+</table>
+
+<div class="row">
+  <div class="col-xs-12">
+    <%= will_paginate @users, :page_links => false, class: 'pagination-sm' %>
+  </div>
+</div>
