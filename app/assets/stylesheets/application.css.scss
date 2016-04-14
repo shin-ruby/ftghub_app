@@ -205,6 +205,9 @@ a {
     margin-right: 15px;
     margin-top: 15px;
   }
+  a {
+    color: $white;
+  }
 }
 
 .avatar {
@@ -238,7 +241,6 @@ a {
   overflow: auto;
   margin-top: 0;
   padding: 0;
-  text-align: center;
   a {
     float: left;
     padding: 0 10px;
@@ -367,4 +369,27 @@ a {
 
 .top-color {
   color: $ftg-red;
+}
+
+/* invite */
+
+.invite-header {
+  background-color: #CCCCCC;
+}
+
+.invite-weixin {
+  .left {
+    padding-top: 10px;
+    .weixin-icon {
+      color: #5CB85C;
+    }
+  }
+  .center {
+    padding-top: 10px;
+    color: $glay;
+  }
+  .angle-right {
+    margin-left: 40px;
+    color: #CCCCCC;
+  }
 }

@@ -3,7 +3,7 @@
 <div class="user-show">
   <div class="row user-show-head">
     <div class="col-xs-4 left">
-      <p><i class="fa fa-user-plus"></i></p>
+      <%= link_to (fa_icon "user-plus"), invite_path %>
     </div>
     <div class="col-xs-4 center">
       <h5 class="text-center"><%= @user.name %></h5>
@@ -32,6 +32,10 @@
       <div class="stats">
         <%= render 'shared/stats' %>
       </div>
+      <section class="stats">
+        <%= render 'follow_form' if user_signed_in? %>
+      </section>
+
       <% if user_signed_in? && @user == current_user -%>
         <p><%= link_to "edit profile", profile_path, class: 'btn btn-default', role: 'button' -%></p>
       <% end -%>

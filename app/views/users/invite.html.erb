@@ -1,0 +1,80 @@
+<% provide(:title, 'invite') %>
+
+<div class="row common-header">
+  <div class="col-xs-1">
+     <%= link_to (fa_icon "angle-left"), user_path(current_user), class: "fa-2x" %>
+  </div>
+  <div class="col-xs-10">
+    <p>invite</p>
+  </div>
+</div>
+
+<div class="row common-header invite-header">
+  <div class="col-md-12">
+    <input type="text" class="form-control input-sm search" placeholder="search">
+  </div>
+</div>
+
+
+<div class="row invite-weixin">
+  <div class="col-xs-1 left">
+  	<%= link_to (fa_icon "weixin"), '#', class: "weixin-icon" %>
+  </div>
+  <div class="col-xs-8 center"><p>invite to weichat</p></div>
+  <div class="col-xs-1 right">
+  	<%= link_to (fa_icon "angle-right"), '#', class: "fa-2x angle-right" %>
+  </div>
+</div>
+
+<table class="table common-list">
+  <tr>
+  	<td><%= image_tag("shin-avatar", size: "40", class: "img-circle avatar") %></td>
+  	<td>
+  		<p class="username">Kristen Hancher</p>
+  		<small>合气道，太极拳</small>
+  	</td>
+  	<td>
+  		<button class="btn btn-success btn-sm" type="submit"><i class="fa fa-user-plus"></i></button>
+  	</td>
+  </tr>
+  <tr>
+  	<td><%= image_tag("shin-avatar", size: "40", class: "img-circle avatar") %></td>
+  	<td>
+  		<p class="username">Kristen Hancher</p>
+  		<small>合气道，太极拳</small>
+  	</td>
+  	<td>
+  		<button class="btn btn-success btn-sm" type="submit"><i class="fa fa-user-plus"></i></button>
+  	</td>
+  </tr>
+  <tr>
+  	<td><%= image_tag("shin-avatar", size: "40", class: "img-circle avatar") %></td>
+  	<td>
+  		<p class="username">Kristen Hancher</p>
+  		<small>合气道，太极拳</small>
+  	</td>
+  	<td>
+  		<button class="btn btn-success btn-sm" type="submit"><i class="fa fa-user-plus"></i></button>
+  	</td>
+  </tr>
+  <tr>
+  	<td><%= image_tag("shin-avatar", size: "40", class: "img-circle avatar") %></td>
+  	<td>
+  		<p class="username">Kristen Hancher</p>
+  		<small>合气道，太极拳</small>
+  	</td>
+  	<td>
+  		<button class="btn btn-success btn-sm" type="submit"><i class="fa fa-user-plus"></i></button>
+  	</td>
+  </tr>
+  <tr>
+  	<td><%= image_tag("shin-avatar", size: "40", class: "img-circle avatar") %></td>
+  	<td>
+  		<p class="username">Kristen Hancher</p>
+  		<small>合气道，太极拳</small>
+  	</td>
+  	<td>
+  		<button class="btn btn-success btn-sm" type="submit"><i class="fa fa-user-plus"></i></button>
+  	</td>
+  </tr>
+</table>

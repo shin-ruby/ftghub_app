@@ -18,6 +18,10 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def invite
+    
+  end
+
   def following
     @title = 'Following'
     @user  = User.find(params[:id])

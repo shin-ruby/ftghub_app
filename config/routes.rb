@@ -13,9 +13,10 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
+  get 'invite' => 'users#invite'
+
   resources :fightposts do
     resources :comments, only: [:create, :destroy]
-    resources :likers, only: [:create, :destroy]
   end
   resources :relationships, only: [:create, :destroy]
   resource :profile
