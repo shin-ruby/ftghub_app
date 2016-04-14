@@ -11,7 +11,9 @@ class StaticPagesController < ApplicationController
   end
 
   def discover
-    
+  end
+
+  def setting
   end
 
   def about

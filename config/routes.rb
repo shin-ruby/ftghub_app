@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'feedpro' => 'static_pages#feedpro'
   get 'feedone' => 'static_pages#feedone'
   get 'feedimg' => 'static_pages#feedimg'
+  get 'setting' => 'static_pages#setting'
 
   devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' }
   resources :users do
