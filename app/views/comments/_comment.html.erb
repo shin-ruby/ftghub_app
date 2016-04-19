@@ -18,7 +18,7 @@
   	<h5><%= comment.user_id %>name</h5>
   	<p>
   		<%= comment.content %>
-  		<% if current_user.admin? && comment.user == current_user -%>
+  		<% if current_user.admin? || comment.user == current_user -%>
 		  	| <%= link_to 'Destroy Comment', [comment.fightpost, comment],
 		               method: :delete,
 		               data: { confirm: 'Are you sure?' } %>
