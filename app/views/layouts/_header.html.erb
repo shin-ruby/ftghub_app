@@ -3,7 +3,7 @@
   <% if user_signed_in? %>
     <% if !current_user.profile.avatar.nil? %>
       <%= image_tag("shin-avatar", size: "36", class: "img-circle ftglogo") %>
-      <h5 class="ftglogo"><%= current_user.name %></h5>
+      <h5 class="ftglogo"><%= link_to current_user.name, user_path(current_user) %></h5>
     <% else %>
       <li><%= link_to image_tag "logo-2.png", size: "36", class: "img-circle ftglogo" %></li>
       <h5 class="ftglogo"><%= current_user.name %></h5>
