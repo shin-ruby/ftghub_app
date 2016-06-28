@@ -42,7 +42,7 @@
         <p><small><%= link_to fightpost.content, fightpost %></small><small>Tags: <%= raw fightpost.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></small></p>
         <ul class="list-inline home-social">
           <li><%= render partial: 'likers/like_form', locals: { fightpost: fightpost } -%></li>
-          <li><%= link_to (fa_icon "comment"), fightpost %><%= fightpost.comments.count -%></li>
+          <li><%= link_to (fa_icon "comment"), fightpost %> <%= fightpost.comments.count -%></li>
           <li><%= link_to (fa_icon "share-square-o"), "#" %></li>
         </ul>
       </div>
